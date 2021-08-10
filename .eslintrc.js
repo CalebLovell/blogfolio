@@ -4,8 +4,7 @@ module.exports = {
 		`plugin:react-hooks/recommended`,
 		`plugin:jsx-a11y/recommended`,
 		`plugin:promise/recommended`,
-		`plugin:@typescript-eslint/recommended`,
-		`prettier/@typescript-eslint`,
+		`plugin:@typescript-eslint/recommended`
 	],
 	parser: `@typescript-eslint/parser`,
 	parserOptions: {
