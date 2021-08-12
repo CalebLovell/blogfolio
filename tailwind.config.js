@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { fontFamily } = require(`tailwindcss/defaultTheme`);
+const { orange } = require(`tailwindcss/colors`);
 
 module.exports = {
 	mode: `jit`,
@@ -12,6 +13,9 @@ module.exports = {
 			},
 			minHeight: {
 				content: `var(--h-content-area)`,
+			},
+			colors: {
+				orange,
 			},
 		},
 	},

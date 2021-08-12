@@ -47,9 +47,14 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 					<meta name='twitter:image:alt' content={description} />
 				</Head>
 			</PlausibleProvider>
-			<Header />
-			{children}
-			<Footer />
+			<div className='bg-gray-900'>
+				<div className='h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500' />
+				<div className='max-w-6xl mx-auto'>
+					<Header />
+					{children}
+					<Footer />
+				</div>
+			</div>
 		</>
 	);
 };
