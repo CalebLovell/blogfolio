@@ -11,7 +11,7 @@
 }
 
 :root {
-	--h-content-area: calc(100vh - theme('height.14'));
+	--h-content-area: calc(100vh - theme('height.1'));
 }
 
 /* custom scrollbar */
