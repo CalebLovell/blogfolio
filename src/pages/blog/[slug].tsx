@@ -40,7 +40,7 @@ export default function PostPage({ meta, code }) {
 
 					<div className='text-gray-300'>&middot;</div>
 
-					<div>{'a date goes here'}</div>
+					<div>a date goes here</div>
 				</div>
 
 				{meta.image ? (

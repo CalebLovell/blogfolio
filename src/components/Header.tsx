@@ -1,4 +1,5 @@
 import * as React from 'react';
+import NextLink from 'next/link';
 
 // import { AboutDropdown } from './AboutDropdown';
 // import { DarkModeButton } from './DarkModeButton';
@@ -8,42 +9,30 @@ import * as React from 'react';
 
 // import { LanguageButton } from './LanguageButton';
 
+const nav = [`blog`, `projects`, `contact`];
+
 export const Header = () => {
 	return (
-		<>
-			<div className='h-1 bg-brand-gradient' />
-			<header className='container flex items-center justify-center shadow-md h-14 bg-brand-secondary'>
-				<div className='w-full max-w-7xl'>
-					<div className='flex items-center justify-between h-full md:hidden'>
-						{/* <MobileMenuButton /> */}
-						<div className='flex items-center space-x-2'>
-							{/* <LanguageButton /> */}
-							{/* <DarkModeButton /> */}
-							<h2>HI</h2>
-						</div>
-					</div>
-					<nav className='items-center justify-between hidden h-full md:flex'>
-						<div className='flex items-center md:space-x-2'>
-							{/* <Logo label={common(`navigation.website.home.title`)} /> */}
-							{/* <Link href='/create' label='TEST' variant='link' />
-							<Link href='/polls' label='TEST' variant='link' />
-							<AboutDropdown /> */}
-							<h2>HI</h2>
-						</div>
-						<div className='flex items-center md:space-x-2 xl:space-x-10'>
-							<div className='flex items-center space-x-2'>
-								{/* <LanguageButton /> */}
-								{/* <DarkModeButton /> */}
-							</div>
-							<div className='flex items-center md:space-x-2'>
-								<h2>HI</h2>
-								{/* <Link href='/login' label='TEST' variant='link' />
-								<Link href='/signup' label='TEST' variant='button' /> */}
-							</div>
-						</div>
-					</nav>
+		<div className='bg-gray-900'>
+			<div className='h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500' />
+			<header className='max-w-6xl mx-auto h-14 flex items-center justify-between'>
+				<div className='flex items-center justify-between h-full'>
+					<NextLink href='/home'>
+						<a href='/home' className='text-gray-200 p-2 font-medium transition duration-150 ease-in-out rounded-md lg:px-4'>
+							home
+						</a>
+					</NextLink>
 				</div>
+				<nav className='flex items-center justify-between h-full'>
+					{nav.map(x => (
+						<NextLink href={`/${x}`} key={x}>
+							<a href={`/${x}`} className='text-gray-200 p-2 font-medium transition duration-150 ease-in-out rounded-md lg:px-4'>
+								{x}
+							</a>
+						</NextLink>
+					))}
+				</nav>
 			</header>
-		</>
+		</div>
 	);
 };
