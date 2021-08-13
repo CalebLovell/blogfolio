@@ -42,7 +42,7 @@ const socials = [
 
 export const Footer = () => {
 	return (
-		<footer className='px-5 flex flex-col items-center bg-brand-secondary'>
+		<footer className='flex flex-col items-center px-5 bg-brand-secondary'>
 			<div className='flex flex-col items-center w-full my-6 space-y-6 max-w-7xl'>
 				<div className='flex flex-col w-full justify-evenly md:flex-row md:items-center md:justify-between'>
 					<div>
@@ -50,7 +50,7 @@ export const Footer = () => {
 							Built with Next.js, TailwindCSS and MDX.
 							<a
 								href='https://github.com/CalebLovell/website'
-								className='rounded-md text-red-600 p-1 hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-gray-800'
+								className='p-1 text-red-600 rounded-md hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-gray-800'
 								target='_blank'
 								rel='noreferrer'
 							>
@@ -64,7 +64,7 @@ export const Footer = () => {
 							<a
 								key={x.title}
 								href={x.href}
-								className='rounded-md text-gray-200 p-2 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+								className='p-2 text-gray-200 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
 								target='_blank'
 								rel='noreferrer'
 							>
