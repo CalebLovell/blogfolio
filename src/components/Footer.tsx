@@ -42,37 +42,33 @@ const socials = [
 
 export const Footer = () => {
 	return (
-		<footer className='flex flex-col items-center px-5 bg-brand-secondary'>
-			<div className='flex flex-col items-center w-full my-6 space-y-6 max-w-7xl'>
-				<div className='flex flex-col w-full justify-evenly md:flex-row md:items-center md:justify-between'>
-					<div>
-						<p className='text-base text-center text-gray-200'>
-							Built with Next.js, TailwindCSS and MDX.
-							<a
-								href='https://github.com/CalebLovell/website'
-								className='p-1 text-red-600 rounded-md hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-gray-800'
-								target='_blank'
-								rel='noreferrer'
-							>
-								Click here
-							</a>
-							to see the code!
-						</p>
-					</div>
-					<div className='flex items-center justify-center mt-4 space-x-6 md:mt-0'>
-						{socials.map(x => (
-							<a
-								key={x.title}
-								href={x.href}
-								className='p-2 text-gray-200 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
-								target='_blank'
-								rel='noreferrer'
-							>
-								<span className='sr-only'>{x.title}</span>
-								{x.svg}
-							</a>
-						))}
-					</div>
+		<footer className='flex flex-col items-center w-full p-5 space-y-6 max-w-7xl'>
+			<div className='flex flex-col w-full justify-evenly md:flex-row md:items-center md:justify-between'>
+				<p className='text-base text-center text-gray-200'>
+					Built with Next.js, TailwindCSS and MDX.
+					<a
+						href='https://github.com/CalebLovell/website'
+						className='p-1 text-red-600 rounded-md hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-gray-800'
+						target='_blank'
+						rel='noreferrer'
+					>
+						Click here
+					</a>
+					to see the code!
+				</p>
+				<div className='flex items-center justify-center mt-4 space-x-6 md:mt-0'>
+					{socials.map(x => (
+						<a
+							key={x.title}
+							href={x.href}
+							className='p-2 text-gray-200 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+							target='_blank'
+							rel='noreferrer'
+						>
+							<span className='sr-only'>{x.title}</span>
+							{x.svg}
+						</a>
+					))}
 				</div>
 			</div>
 		</footer>
