@@ -14,18 +14,22 @@ export default function Contact() {
 		console.log(rawFormData);
 	};
 
-	const prompts = [
-		`How can I help you?`,
-		`Tell me about the project you are working on`,
-		`What 3 things get you up in the morning?`,
-	];
+	const prompts = [`How can I help you?`, `Tell me about the project you are working on`, `What 3 things get you up in the morning?`];
 
 	return (
 		<PageWrapper>
 			<main className='flex flex-col px-5 min-h-content'>
-				<section className='flex flex-col w-full py-8 space-y-8'>
+				<section className='flex flex-col items-start w-full py-8 space-y-8'>
 					<h1 className='text-4xl font-extrabold text-gray-200 sm:text-5xl md:text-6xl'>Contact Me</h1>
 					<h2 className='mt-3 text-xl text-gray-400 sm:mt-4'>I love meeting new people and skipping right to the fun stuff.</h2>
+					<div className='flex text-sm leading-none text-white bg-gray-800 rounded-full'>
+						<button className='px-6 py-3 transition-colors duration-300 ease-in rounded-l-full hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800'>
+							<span>Say hi!</span>
+						</button>
+						<button className='px-6 py-3 transition-colors duration-300 ease-in rounded-r-full hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800'>
+							<span>Work with me</span>
+						</button>
+					</div>
 				</section>
 				<form className='w-full py-8 my-4 space-y-4 rounded-lg' onSubmit={handleSubmit(onSubmit)} autoComplete='off'>
 					<div>
