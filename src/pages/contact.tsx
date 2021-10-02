@@ -1,10 +1,25 @@
 import * as React from 'react';
 import { PageWrapper } from '@components/PageWrapper';
 import { useForm } from 'react-hook-form';
+import { RadioGroup } from '@headlessui/react';
+
+const workPrompts = [
+	{ id: 0, message: `I'd like to work with you` },
+	{ id: 1, message: `I have a project idea for you` },
+	{ id: 2, message: `Other` },
+];
+
+const chatPrompts = [
+	{ id: 3, message: `Tell me about the project you're working on` },
+	{ id: 4, message: `Tell me the coolest thing you learned recently` },
+	{ id: 5, message: `Tell me whatever you want, I'm not your boss!` },
+];
 
 export default function Contact() {
-	const [promptsType, setContactType] = React.useState(0);
-	const { handleSubmit } = useForm({
+	const [prompts, setPrompts] = React.useState(workPrompts);
+	const [selectedPrompt, setSelectedPrompt] = React.useState(workPrompts[0]);
+
+	const { handleSubmit, register } = useForm({
 		defaultValues: {
 			name: ``,
 			email: ``,
@@ -13,17 +28,12 @@ export default function Contact() {
 	});
 
 	const onSubmit = (rawFormData: any) => {
-		console.log(rawFormData);
+		console.log({ ...rawFormData, prompt: selectedPrompt });
 	};
 
-	const workPrompts = [`I'd like to work with you`, `I have a project idea for you`, `Other`];
-	const chatPrompts = [
-		`Tell me about the project you're working on`,
-		`Tell me about your biggest passion in life`,
-		`Tell me the coolest thing you learned recently`,
-		`Other`,
-	];
-	const prompts = [workPrompts, chatPrompts];
+	function classNames(...classes) {
+		return classes.filter(Boolean).join(` `);
+	}
 
 	return (
 		<PageWrapper>
@@ -33,20 +43,24 @@ export default function Contact() {
 					<h2 className='mt-3 text-xl text-gray-400 sm:mt-4'>I love meeting new people! Would you like to...</h2>
 					<div className='flex text-sm leading-none text-white bg-gray-800 rounded-md'>
 						<button
-							className={`px-6 py-3 transition-colors duration-150 ease-in rounded-l-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
-								promptsType === 0 ? `bg-red-700` : `bg-gray-800`
+							className={`px-6 py-3 transition-colors duration-150 ease-in rounded-l-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
+								prompts[0].id === 0 ? `bg-red-700` : `bg-gray-800`
 							}`}
-							onClick={() => setContactType(0)}
+							onClick={() => {
+								setPrompts(workPrompts);
+							}}
 						>
-							<span>Work With Me</span>
+							Work With Me
 						</button>
 						<button
-							className={`px-6 py-3 transition-colors duration-150 ease-in rounded-r-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
-								promptsType === 1 ? `bg-red-700` : `bg-gray-800`
+							className={`px-6 py-3 transition-colors duration-150 ease-in rounded-r-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
+								prompts[0].id === 3 ? `bg-red-700` : `bg-gray-800`
 							}`}
-							onClick={() => setContactType(1)}
+							onClick={() => {
+								setPrompts(chatPrompts);
+							}}
 						>
-							<span>Just Say Hi</span>
+							Just Say Hi
 						</button>
 					</div>
 				</section>
@@ -56,6 +70,7 @@ export default function Contact() {
 							Name
 						</label>
 						<input
+							{...register(`name`)}
 							name='name'
 							className='w-full p-2 mt-2 text-gray-200 placeholder-gray-400 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-red-600 focus:border-red-600 sm:text-sm'
 							placeholder='Your name'
@@ -69,6 +84,7 @@ export default function Contact() {
 							Email
 						</label>
 						<input
+							{...register(`email`)}
 							name='email'
 							className='w-full p-2 mt-2 text-gray-200 placeholder-gray-400 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-red-600 focus:border-red-600 sm:text-sm'
 							placeholder='Your email'
@@ -77,27 +93,52 @@ export default function Contact() {
 							maxLength={100}
 						/>
 					</div>
-					<div>
-						<label htmlFor='prompt' className='text-base font-semibold text-gray-200'>
-							Select a Prompt
-						</label>
-						<select
-							id='prompt'
-							name='prompt'
-							className='w-full p-2 pr-10 mt-2 text-gray-200 placeholder-gray-400 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-red-600 focus:border-red-600 sm:text-sm'
-							defaultValue='Canada'
-							required
-						>
-							{prompts[promptsType].map(x => (
-								<option key={x}>{x}</option>
+					<RadioGroup value={selectedPrompt} onChange={setSelectedPrompt}>
+						<RadioGroup.Label className='text-base font-semibold text-gray-200'>Select a Prompt</RadioGroup.Label>
+						<div className='mt-2 -space-y-px bg-gray-800 border border-gray-700 divide-y divide-gray-700 rounded-md'>
+							{prompts.map((prompt, i) => (
+								<RadioGroup.Option
+									key={prompt.id}
+									value={prompt.message}
+									className={({ checked }) =>
+										classNames(
+											i === 0 ? `rounded-tl-md rounded-tr-md` : ``,
+											i === prompts.length - 1 ? `rounded-bl-md rounded-br-md` : ``,
+											checked ? `bg-gray-700` : ``,
+											`relative p-3 flex cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-red-600 focus:border-red-600`
+										)
+									}
+								>
+									{({ checked }) => (
+										<div className='flex space-x-4'>
+											<div className='flex items-center'>
+												<span
+													className={classNames(
+														checked
+															? `bg-red-600 border-gray-700 outline-none ring-2 ring-offset-1 ring-red-600 ring-offset-gray-700`
+															: `border-gray-500`,
+														`h-4 w-4 mt-0.5 cursor-pointer rounded-full border flex items-center justify-center`
+													)}
+													aria-hidden='true'
+												>
+													<span className={classNames(checked ? `bg-gray-700` : ``, `rounded-full w-1.5 h-1.5`)} />
+												</span>
+											</div>
+											<RadioGroup.Label as='span' className='block text-sm font-normal text-gray-200'>
+												{prompt?.message}
+											</RadioGroup.Label>
+										</div>
+									)}
+								</RadioGroup.Option>
 							))}
-						</select>
-					</div>
+						</div>
+					</RadioGroup>
 					<div>
 						<label htmlFor='message' className='text-base font-semibold text-gray-200'>
 							Message
 						</label>
 						<textarea
+							{...register(`message`)}
 							name='message'
 							className='w-full p-2 mt-2 text-gray-200 placeholder-gray-400 bg-gray-800 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-0 focus:ring-red-600 focus:border-red-600 sm:text-sm'
 							placeholder='Your message'
