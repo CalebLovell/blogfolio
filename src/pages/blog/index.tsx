@@ -51,9 +51,9 @@ const posts = [
 export default function Blog() {
 	return (
 		<PageWrapper>
-			<main className='flex flex-col px-5 min-h-content'>
-				<h1 className='mt-6 text-3xl font-extrabold tracking-tight text-gray-200 sm:text-4xl'>From the blog</h1>
-				<h2 className='mt-3 text-xl text-gray-400 sm:mt-4'>All my articles on tech, languages, travel, etc.</h2>
+			<main className='flex flex-col px-5 py-4 space-y-4 min-h-content'>
+				<h1 className='text-3xl font-extrabold tracking-tight text-gray-200 sm:text-4xl'>Blog</h1>
+				<h2 className='mt-2 text-lg text-gray-400 sm:mt-3'>All my articles on tech, languages, travel, etc</h2>
 				<div className='grid max-w-lg gap-5 mx-auto mt-6 lg:grid-cols-3 lg:max-w-none'>
 					{posts.map(post => (
 						<BlogPreview key={post.title} post={post} />

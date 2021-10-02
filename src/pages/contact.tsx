@@ -38,9 +38,9 @@ export default function Contact() {
 	return (
 		<PageWrapper>
 			<main className='flex flex-col px-5 min-h-content'>
-				<section className='flex flex-col items-start w-full py-8 space-y-8'>
-					<h1 className='text-4xl font-extrabold text-gray-200 sm:text-5xl md:text-6xl'>Contact Me</h1>
-					<h2 className='mt-3 text-xl text-gray-400 sm:mt-4'>I love meeting new people! Would you like to...</h2>
+				<section className='flex flex-col items-start w-full py-4 space-y-4'>
+					<h1 className='text-3xl font-extrabold tracking-tight text-gray-200 sm:text-4xl'>Contact Me</h1>
+					<h2 className='mt-2 text-lg text-gray-400 sm:mt-3'>I love meeting new people! Would you like to...</h2>
 					<div className='flex text-sm leading-none text-white bg-gray-800 rounded-md'>
 						<button
 							className={`px-6 py-3 transition-colors duration-150 ease-in rounded-l-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
