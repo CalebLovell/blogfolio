@@ -2,11 +2,9 @@ import { getAllPostsMeta, getPostBySlug } from '@utils/mdx';
 import { MdxComponents } from '@components/MdxComponents';
 import { getMDXComponent } from 'mdx-bundler/client';
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
 import { PageWrapper } from '@components/PageWrapper';
-import { HeroSection } from '@components/HeroSection';
 import { Blog } from 'pages/blog';
 
 export const getStaticPaths = () => {

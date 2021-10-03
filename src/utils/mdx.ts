@@ -2,6 +2,7 @@ import fs from 'fs';
 import glob from 'glob';
 import matter from 'gray-matter';
 import { bundleMDX } from 'mdx-bundler';
+import { Blog } from 'pages/blog';
 import path from 'path';
 
 const ROOT_PATH = process.cwd();
@@ -25,7 +26,7 @@ export const getAllPostsMeta = () => {
 				const data = matter(source).data;
 
 				return {
-					...data,
+					...(data as Blog),
 					slug,
 				};
 			})
@@ -43,7 +44,7 @@ export const getPostBySlug = async (slug: string) => {
 	const { code, frontmatter } = await bundleMDX(source);
 
 	const meta = {
-		...frontmatter,
+		...(frontmatter as Blog),
 		slug,
 	};
 
