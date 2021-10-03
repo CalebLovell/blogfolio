@@ -38,7 +38,7 @@ const projects: Project[] = [
 	{
 		title: `Caleb Lovell Personal Website`,
 		description: `My personal website is what you are viewing right now! It's a blog, portfolio, contact form, and space for me to experiment with new technologies too.`,
-		image: { url: `http://via.placeholder.com/1440x900`, alt: `placeholder` },
+		image: { url: `/steelpoll.png`, alt: `placeholder` },
 		websiteUrl: `https://www.caleblovell.dev/`,
 		githubUrl: `https://github.com/CalebLovell/personal-site`,
 		tech: [
