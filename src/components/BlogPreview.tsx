@@ -1,10 +1,18 @@
 import { Blog } from 'pages/blog';
+import Image from 'next/image';
 
 export const BlogPreview = ({ post }: { post: Blog }) => {
 	return (
 		<article key={post.title} className='flex flex-col overflow-hidden rounded-lg'>
 			<div className='flex-shrink-0'>
-				<img className='object-cover w-full h-48' src={post.image.url} alt={post.image.alt} />
+				<Image
+					src={`/${post.image.url}`}
+					width={350}
+					height={200}
+					alt={post.image.alt}
+					placeholder='blur'
+					blurDataURL={`/${post.image.url}`}
+				/>
 			</div>
 			<div className='flex flex-col justify-between flex-1 p-6 bg-gray-800'>
 				<section className='flex-1'>

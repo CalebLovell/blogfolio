@@ -38,7 +38,14 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 						<h2 className='text-lg text-center text-gray-400'>{meta.description}</h2>
 						<div className='flex flex-col w-full'>
 							<div className='overflow-hidden rounded-md text-[0px]'>
-								<Image src={`/${meta.image.url}`} width={1920} height={960} alt={meta.image.alt} />
+								<Image
+									src={`/${meta.image.url}`}
+									width={1920}
+									height={960}
+									alt={meta.image.alt}
+									placeholder='blur'
+									blurDataURL={`/${meta.image.url}`}
+								/>
 							</div>
 						</div>
 					</header>
@@ -47,7 +54,14 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 					</main>
 					<footer className='flex flex-row items-center justify-between w-full text-sm'>
 						<div className='flex flex-row items-center text-gray-200'>
-							<Image src='/profile.jpg' height={30} width={30} className='object-cover rounded-full' />
+							<Image
+								src='/profile.jpg'
+								height={30}
+								width={30}
+								className='object-cover rounded-full'
+								placeholder='blur'
+								blurDataURL={`/${meta.image.url}`}
+							/>
 							<p>
 								&nbsp;&nbsp;By Caleb Lovell
 								<time dateTime={meta.publishedAt} title={meta.publishedAt}>

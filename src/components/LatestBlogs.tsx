@@ -1,5 +1,6 @@
 import { Blog } from 'pages/blog';
 import { CalendarIcon, ClockIcon } from '@heroicons/react/solid';
+import Image from 'next/image';
 
 export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 	return (
@@ -12,7 +13,15 @@ export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 					}`}
 				>
 					<a href={`blog/${blog.slug}`} className='flex gap-4 focus:outline-none'>
-						<img className='hidden lg:block object-cover h-full max-w-[11rem] rounded-md' src={blog.image.url} alt={blog.image.alt} />
+						<Image
+							className='hidden lg:block object-cover h-full max-w-[11rem] rounded-md'
+							width={200}
+							height={100}
+							src={`/${blog.image.url}`}
+							alt={blog.image.alt}
+							placeholder='blur'
+							blurDataURL={`/${blog.image.url}`}
+						/>
 						<div className='flex flex-col w-full min-h-[6rem]'>
 							<p className='mr-3 text-lg font-medium text-gray-200'>{blog.title}</p>
 							<p className='space-x-2 text-sm font-semibold text-red-600'>

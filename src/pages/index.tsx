@@ -15,7 +15,7 @@ export default function Home({ blogs }) {
 				projects, you can find me reading, learning languages, traveling or hiking in the mountains."
 				/>
 				<section className='flex flex-col items-center'>
-					{/* <ProfileCard /> */}
+					<ProfileCard />
 					<div className='w-full'>
 						<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Technologies</h3>
 						<TechList />

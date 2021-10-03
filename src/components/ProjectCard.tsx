@@ -1,12 +1,13 @@
 import { Project } from 'pages/projects';
+import Image from 'next/image';
 
 export const ProjectCard = ({ project, index }: { project: Project; index: number }) => {
 	const isOdd = index % 2 === 0;
 	return (
 		<div className='p-1 rounded-md bg-gradient-to-br from-purple-400 via-pink-500 to-red-500'>
 			<article className={`flex bg-gray-800 p-4 flex-col w-full gap-4 rounded-md ${isOdd ? `lg:flex-row` : `lg:flex-row-reverse`}`}>
-				<div className='w-full h-full bg-gray-700 rounded-md'>
-					<img className='object-cover w-full h-full rounded-md lg:h-72' src={project.image.url} alt={project.image.alt} />
+				<div className='overflow-hidden'>
+					<Image src={project.image.url} width={1094} height={684} alt={project.image.alt} placeholder='blur' blurDataURL={project.image.url} />
 				</div>
 				<section className='flex flex-col justify-between w-full h-full gap-2 rounded-md lg:h-72'>
 					<h1 className={`text-3xl font-bold text-gray-200 ${isOdd ? `lg:text-left` : `lg:text-right`}`}>{project.title}</h1>
