@@ -55,7 +55,7 @@ export default function Projects() {
 	return (
 		<PageWrapper>
 			<HeroSection title='Projects' subtitle="A list of projects I've built" />
-			<section className='w-full mx-5 my-8 space-y-8 md:space-y-10'>
+			<section className='w-full px-3 my-8 space-y-8 md:px-5 md:space-y-10'>
 				{projects.map((x, index) => (
 					<>
 						<ProjectCard key={x.title} project={x} index={index} />

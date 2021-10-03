@@ -18,7 +18,7 @@ export default function Blog({ blogs }: { blogs: Blog[] }) {
 	return (
 		<PageWrapper>
 			<HeroSection title='Blog' subtitle='All my articles on tech, languages, travel, etc' />
-			<section className='grid max-w-lg gap-5 mx-auto my-4 lg:grid-cols-3 lg:max-w-none'>
+			<section className='grid max-w-lg gap-5 mx-3 my-4 md:mx-5 lg:grid-cols-3 lg:max-w-none'>
 				{blogs?.map(post => (
 					<BlogPreview key={post.title} post={post} />
 				))}
