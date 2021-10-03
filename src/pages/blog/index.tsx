@@ -51,9 +51,11 @@ const posts = [
 export default function Blog() {
 	return (
 		<PageWrapper>
-			<main className='flex flex-col px-5 py-4 space-y-4 min-h-content'>
+			<section className='flex flex-col items-center w-full mb-4 space-y-4'>
 				<h1 className='text-3xl font-extrabold tracking-tight text-gray-200 sm:text-4xl'>Blog</h1>
 				<h2 className='mt-2 text-lg text-gray-400 sm:mt-3'>All my articles on tech, languages, travel, etc</h2>
+			</section>
+			<main className='flex flex-col px-5 py-4 space-y-4 min-h-content'>
 				<div className='grid max-w-lg gap-5 mx-auto mt-6 lg:grid-cols-3 lg:max-w-none'>
 					{posts.map(post => (
 						<BlogPreview key={post.title} post={post} />
