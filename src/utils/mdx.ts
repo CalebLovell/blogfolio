@@ -5,7 +5,7 @@ import { bundleMDX } from 'mdx-bundler';
 import path from 'path';
 
 const ROOT_PATH = process.cwd();
-const POSTS_PATH = path.join(ROOT_PATH, 'posts');
+const POSTS_PATH = path.join(ROOT_PATH, `posts`);
 
 export const getAllPostsMeta = () => {
 	const PATH = path.join(POSTS_PATH);
@@ -17,10 +17,10 @@ export const getAllPostsMeta = () => {
 		paths
 			.map(filePath => {
 				// Get the content of the file
-				const source = fs.readFileSync(path.join(filePath), 'utf8');
+				const source = fs.readFileSync(path.join(filePath), `utf8`);
 
 				// Get the file name without .mdx
-				const slug = path.basename(filePath).replace('.mdx', '');
+				const slug = path.basename(filePath).replace(`.mdx`, ``);
 				// Use gray-matter to extract the post meta from post content
 				const data = matter(source).data;
 
@@ -38,7 +38,7 @@ export const getAllPostsMeta = () => {
 // Get content of specific post
 export const getPostBySlug = async (slug: string) => {
 	// Get the content of the file
-	const source = fs.readFileSync(path.join(POSTS_PATH, `${slug}.mdx`), 'utf8');
+	const source = fs.readFileSync(path.join(POSTS_PATH, `${slug}.mdx`), `utf8`);
 
 	const { code, frontmatter } = await bundleMDX(source);
 
