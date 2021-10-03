@@ -4,11 +4,15 @@ export const BlogPreview = ({ post }: { post: Blog }) => {
 	return (
 		<article key={post.title} className='flex flex-col overflow-hidden rounded-lg'>
 			<div className='flex-shrink-0'>
-				<img className='object-cover w-full h-48' src={post.imageUrl} alt='' />
+				<img className='object-cover w-full h-48' src={post.image.url} alt={post.image.alt} />
 			</div>
 			<div className='flex flex-col justify-between flex-1 p-6 bg-gray-800'>
 				<section className='flex-1'>
-					<p className='text-sm font-medium text-red-600'>{post.category}</p>
+					<p className='space-x-2 text-sm font-medium text-red-600'>
+						{post.tags?.map(x => (
+							<span key={x}>#{x}</span>
+						))}
+					</p>
 					<a href={`blog/${post.slug}`} className='block mt-2'>
 						<h1 className='text-xl font-semibold text-gray-200'>{post.title}</h1>
 						<p className='mt-3 text-base text-gray-400'>{post.description}</p>

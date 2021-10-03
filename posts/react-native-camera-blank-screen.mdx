@@ -1,0 +1,26 @@
+---
+title: 'React Native Camera Showing Blank Screen'
+description: 'Why you might be getting a blank screen error with react-native-camera or expo-camera'
+slug: 'react-native-camera-blank-screen'
+tags: ['Tech', 'React Native', 'Expo']
+image: { url: './react-native-camera-blank-screen.jpg', alt: 'phone on table' }
+publishedAt: '10-3-2021'
+updatedAt: '10-3-2021'
+readingTime: '1 minute'
+---
+
+When using the package `expo-camera` or `react-native-camera`, you may encounter a blank screen with no error message showing.
+
+Make sure that you are importing the permissions module from React Native and requesting access to a user's camera like this:
+
+```js
+import { Permissions } from 'react-native';
+```
+
+If you forget to do it, nothing will work and you won't know why.
+
+If you find this blog post and it solves your problem, congratulations, you are as dumb as I am! 😁
+
+I spent about an hour before I realized what was wrong, so I thought I'd make a quick post in case anyone else ever does the same thing.
+
+Have a great day!

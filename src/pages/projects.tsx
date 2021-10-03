@@ -1,3 +1,4 @@
+import { HeroSection } from '@components/HeroSection';
 import { PageWrapper } from '@components/PageWrapper';
 import { ProjectCard } from '@components/ProjectCard';
 import { ProjectDivider } from '@components/ProjectDivider';
@@ -12,7 +13,7 @@ import { TypescriptIcon } from '@components/svg/TypeScriptIcon';
 export interface Project {
 	title: string;
 	description: string;
-	imageUrl: string;
+	image: { url: string; alt: string };
 	websiteUrl: string;
 	githubUrl: string;
 	tech: { id: number; title: string; icon: React.ReactNode }[];
@@ -21,8 +22,8 @@ export interface Project {
 const projects: Project[] = [
 	{
 		title: `SteelPoll`,
-		description: `SteelPoll is a web app for making real-time, privacy-focused polls that you can share and vote on with friends. This site uses First Past The Post, Ranked Choice and STAR voting systems.`,
-		imageUrl: `/steelpoll_results.png`,
+		description: `SteelPoll is a web app for making real-time, privacy-focused polls that you can share with your friends. You can vote with First Past The Post, Ranked Choice and STAR voting systems.`,
+		image: { url: `/steelpoll_results.png`, alt: `steelpoll results page` },
 		websiteUrl: `https://www.steelpoll.com/`,
 		githubUrl: `https://github.com/CalebLovell/steelpoll`,
 		tech: [
@@ -37,7 +38,7 @@ const projects: Project[] = [
 	{
 		title: `Caleb Lovell Personal Website`,
 		description: `My personal website is what you are viewing right now! It's a blog, portfolio, contact form, and space for me to experiment with new technologies too.`,
-		imageUrl: `http://via.placeholder.com/1440x900`,
+		image: { url: `http://via.placeholder.com/1440x900`, alt: `placeholder` },
 		websiteUrl: `https://www.caleblovell.dev/`,
 		githubUrl: `https://github.com/CalebLovell/personal-site`,
 		tech: [
@@ -53,20 +54,15 @@ const projects: Project[] = [
 export default function Projects() {
 	return (
 		<PageWrapper>
-			<main className='flex flex-col items-center px-5 min-h-content'>
-				<section className='flex flex-col items-center w-full space-y-4'>
-					<h1 className='text-3xl font-extrabold tracking-tight text-gray-200 sm:text-4xl'>Projects</h1>
-					<h2 className='mt-2 text-lg text-gray-400 sm:mt-3'>A list of projects I&apos;ve built</h2>
-				</section>
-				<div className='w-full my-8 space-y-8 md:my-10 md:space-y-10'>
-					{projects.map((x, index) => (
-						<>
-							<ProjectCard key={x.title} project={x} index={index} />
-							{index !== projects.length - 1 && <ProjectDivider />}
-						</>
-					))}
-				</div>
-			</main>
+			<HeroSection title='Projects' subtitle="A list of projects I've built" />
+			<section className='w-full mx-5 my-8 space-y-8 md:space-y-10'>
+				{projects.map((x, index) => (
+					<>
+						<ProjectCard key={x.title} project={x} index={index} />
+						{index !== projects.length - 1 && <ProjectDivider />}
+					</>
+				))}
+			</section>
 		</PageWrapper>
 	);
 }
