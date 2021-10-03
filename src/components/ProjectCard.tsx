@@ -16,9 +16,10 @@ export const ProjectCard = ({ project, index }: { project: Project; index: numbe
 						</h2>
 						<div className={`flex flex-wrap gap-2 mt-2 ${isOdd ? `lg:flex-row` : `lg:flex-row-reverse`}`}>
 							{project.tech.map(x => (
-								<div key={x.id} className='flex items-center px-1 py-1 bg-gray-900 border-2 border-gray-400 rounded-md lg:px-3'>
+								<div key={x.title} className='flex items-center px-1 py-1 bg-gray-900 border-2 border-gray-400 rounded-md lg:px-3'>
 									<p className='text-gray-200 lg:text-lg'>{x.title}</p>
-									<div className='ml-2'>{x.icon}</div>
+									{/* Hack cuz the MDX icon is weird */}
+									{x.title === `MDX` ? <div className='ml-2'>{x.icon}</div> : <div className='w-4 ml-2 md:w-6'>{x.icon}</div>}
 								</div>
 							))}
 						</div>

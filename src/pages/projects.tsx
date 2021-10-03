@@ -16,7 +16,7 @@ export interface Project {
 	image: { url: string; alt: string };
 	websiteUrl: string;
 	githubUrl: string;
-	tech: { id: number; title: string; icon: React.ReactNode }[];
+	tech: { title: string; icon: React.ReactNode }[];
 }
 
 const projects: Project[] = [
@@ -27,12 +27,12 @@ const projects: Project[] = [
 		websiteUrl: `https://www.steelpoll.com/`,
 		githubUrl: `https://github.com/CalebLovell/steelpoll`,
 		tech: [
-			{ id: 0, title: `Next.js`, icon: <NextIcon /> },
-			{ id: 1, title: `React.js`, icon: <ReactIcon /> },
-			{ id: 2, title: `Firebase`, icon: <FirebaseIcon /> },
-			{ id: 3, title: `D3.js`, icon: <D3Icon /> },
-			{ id: 4, title: `Tailwind CSS`, icon: <TailwindIcon /> },
-			{ id: 5, title: `TypeScript`, icon: <TypescriptIcon /> },
+			{ title: `Next.js`, icon: <NextIcon /> },
+			{ title: `React.js`, icon: <ReactIcon /> },
+			{ title: `Firebase`, icon: <FirebaseIcon /> },
+			{ title: `D3.js`, icon: <D3Icon /> },
+			{ title: `Tailwind CSS`, icon: <TailwindIcon /> },
+			{ title: `TypeScript`, icon: <TypescriptIcon /> },
 		],
 	},
 	{
@@ -42,11 +42,11 @@ const projects: Project[] = [
 		websiteUrl: `https://www.caleblovell.dev/`,
 		githubUrl: `https://github.com/CalebLovell/personal-site`,
 		tech: [
-			{ id: 0, title: `Next.js`, icon: <NextIcon /> },
-			{ id: 1, title: `React.js`, icon: <ReactIcon /> },
-			{ id: 2, title: `MDX`, icon: <MDXIcon /> },
-			{ id: 3, title: `Tailwind CSS`, icon: <TailwindIcon /> },
-			{ id: 4, title: `TypeScript`, icon: <TypescriptIcon /> },
+			{ title: `Next.js`, icon: <NextIcon /> },
+			{ title: `React.js`, icon: <ReactIcon /> },
+			{ title: `MDX`, icon: <MDXIcon /> },
+			{ title: `Tailwind CSS`, icon: <TailwindIcon /> },
+			{ title: `TypeScript`, icon: <TypescriptIcon /> },
 		],
 	},
 ];
