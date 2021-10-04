@@ -4,7 +4,7 @@ module.exports = {
 		`plugin:react-hooks/recommended`,
 		`plugin:jsx-a11y/recommended`,
 		`plugin:promise/recommended`,
-		`plugin:@typescript-eslint/recommended`
+		`plugin:@typescript-eslint/recommended`,
 	],
 	parser: `@typescript-eslint/parser`,
 	parserOptions: {
@@ -25,6 +25,8 @@ module.exports = {
 		React: `writable`,
 	},
 	rules: {
+		'jsx-a11y/heading-has-content': `off`,
+		'jsx-a11y/anchor-has-content': `off`,
 		'@typescript-eslint/explicit-module-boundary-types': `off`,
 		'@typescript-eslint/no-explicit-any': `off`,
 		'@typescript-eslint/ban-ts-comment': `off`,

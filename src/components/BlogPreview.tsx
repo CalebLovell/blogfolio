@@ -5,14 +5,7 @@ export const BlogPreview = ({ post }: { post: Blog }) => {
 	return (
 		<article key={post.title} className='flex flex-col overflow-hidden rounded-lg'>
 			<div className='flex-shrink-0'>
-				<Image
-					src={`/${post.image.url}`}
-					width={350}
-					height={200}
-					alt={post.image.alt}
-					placeholder='blur'
-					blurDataURL={`/${post.image.url}`}
-				/>
+				<Image src={`/${post.image.url}`} width={350} height={200} alt={post.image.alt} placeholder='blur' blurDataURL={`/${post.image.url}`} />
 			</div>
 			<div className='flex flex-col justify-between flex-1 p-6 bg-gray-800'>
 				<section className='flex-1'>

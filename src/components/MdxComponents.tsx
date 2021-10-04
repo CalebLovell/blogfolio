@@ -8,9 +8,11 @@ export const MdxComponents = {
 	h3: (props: any) => <h3 className='mt-8 mb-5 text-xl font-bold' {...props} />,
 	h4: (props: any) => <h4 className='mt-6 mb-5 text-lg font-bold' {...props} />,
 	p: (props: any) => <p className='mb-5 leading-7' {...props} />,
-	a: ({ href = '', ...props }) => {
-		if (href.startsWith('http')) {
-			return <a className='font-medium transition-colors text-sky-500 hover:text-sky-700' href={href} target='_blank' rel='noopener' {...props} />;
+	a: ({ href = ``, ...props }) => {
+		if (href.startsWith(`http`)) {
+			return (
+				<a className='font-medium transition-colors text-sky-500 hover:text-sky-700' href={href} target='_blank' rel='noreferrer' {...props} />
+			);
 		}
 
 		return (
@@ -35,7 +37,7 @@ export const MdxComponents = {
 			{children && <figcaption className='mt-2 text-sm text-gray-500'>{children}</figcaption>}
 		</figure>
 	),
-	img: ({ children, ...props }: { children: React.ReactNode }) => (
+	img: ({ ...props }: { children: React.ReactNode }) => (
 		<div className='my-5'>
 			<NextImage {...(props as any)} />
 		</div>
