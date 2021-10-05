@@ -39,12 +39,12 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 						<div className='flex flex-col w-full'>
 							<div className='overflow-hidden rounded-md text-[0px]'>
 								<Image
-									src={`/${meta.image.url}`}
+									src={`/${meta.image.url.substring(2)}`}
 									width={1920}
 									height={960}
 									alt={meta.image.alt}
 									placeholder='blur'
-									blurDataURL={`/${meta.image.url}`}
+									blurDataURL={`/${meta.image.url.substring(2)}`}
 								/>
 							</div>
 						</div>

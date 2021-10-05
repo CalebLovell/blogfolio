@@ -17,10 +17,10 @@ export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 							className='hidden lg:block object-cover h-full max-w-[11rem] rounded-md'
 							width={200}
 							height={100}
-							src={`/${blog.image.url}`}
+							src={`/${blog.image.url.substring(2)}`}
 							alt={blog.image.alt}
 							placeholder='blur'
-							blurDataURL={`/${blog.image.url}`}
+							blurDataURL={`/${blog.image.url.substring(2)}`}
 						/>
 						<div className='flex flex-col w-full min-h-[6rem]'>
 							<p className='mr-3 text-lg font-medium text-gray-200'>{blog.title}</p>
