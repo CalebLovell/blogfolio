@@ -45,7 +45,7 @@ export const TechList = () => {
 	return (
 		<>
 			<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Frontend Tech</h3>
-			<ul className='flex flex-wrap gap-x-2 gap-y-2'>
+			<ul className='flex flex-wrap text-red-400 gap-x-3 gap-y-3'>
 				{frontend.map(x => (
 					<div key={x.title} className='flex flex-col items-center justify-center bg-gray-800 rounded-md w-28 h-28'>
 						{x.icon}
@@ -54,7 +54,7 @@ export const TechList = () => {
 				))}
 			</ul>
 			<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Backend Tech</h3>
-			<ul className='flex flex-wrap gap-x-2 gap-y-2'>
+			<ul className='flex flex-wrap text-red-400 gap-x-3 gap-y-3'>
 				{backend.map(x => (
 					<div key={x.title} className='flex flex-col items-center justify-center bg-gray-800 rounded-md w-28 h-28'>
 						{x.icon}

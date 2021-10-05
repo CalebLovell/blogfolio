@@ -15,6 +15,7 @@ export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 						}`}
 					>
 						<a href={`blog/${blog.slug}`} className='flex gap-4 focus:outline-none'>
+							{/* TODO */}
 							<Image
 								className='hidden lg:block object-cover h-full max-w-[11rem] rounded-md'
 								width={200}
