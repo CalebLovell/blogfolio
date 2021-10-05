@@ -17,12 +17,10 @@ export default function Home({ blogs }) {
 				<section className='flex flex-col items-center'>
 					<ProfileCard />
 					<div className='w-full'>
-						<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Technologies</h3>
-						<TechList />
+						<LatestBlogs blogs={blogs} />
 					</div>
 					<div className='w-full'>
-						<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Latest Posts</h3>
-						<LatestBlogs blogs={blogs} />
+						<TechList />
 					</div>
 				</section>
 			</div>

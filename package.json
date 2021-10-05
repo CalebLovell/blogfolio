@@ -15,6 +15,7 @@
 	"dependencies": {
 		"@headlessui/react": "^1.4.1",
 		"@heroicons/react": "^1.0.4",
+		"@icons-pack/react-simple-icons": "^4.6.1",
 		"@tailwindcss/line-clamp": "^0.2.2",
 		"esbuild": "^0.12.19",
 		"gray-matter": "^4.0.3",
