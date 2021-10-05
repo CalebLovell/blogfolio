@@ -2,13 +2,9 @@ import { HeroSection } from '@components/HeroSection';
 import { PageWrapper } from '@components/PageWrapper';
 import { ProjectCard } from '@components/ProjectCard';
 import { ProjectDivider } from '@components/ProjectDivider';
-import { D3Icon } from '@components/svg/D3Icon';
-import { FirebaseIcon } from '@components/svg/FirebaseIcon';
 import { MDXIcon } from '@components/svg/MDXIcon';
-import { NextIcon } from '@components/svg/NextIcon';
-import { ReactIcon } from '@components/svg/ReactIcon';
-import { TailwindIcon } from '@components/svg/TailwindIcon';
-import { TypescriptIcon } from '@components/svg/TypeScriptIcon';
+
+import { Nextdotjs, Tailwindcss, Typescript, ReactJs, Firebase, DThreeDotjs } from '@icons-pack/react-simple-icons';
 
 export interface Project {
 	title: string;
@@ -27,12 +23,12 @@ const projects: Project[] = [
 		websiteUrl: `https://www.steelpoll.com/`,
 		githubUrl: `https://github.com/CalebLovell/steelpoll`,
 		tech: [
-			{ title: `Next.js`, icon: <NextIcon /> },
-			{ title: `React.js`, icon: <ReactIcon /> },
-			{ title: `Firebase`, icon: <FirebaseIcon /> },
-			{ title: `D3.js`, icon: <D3Icon /> },
-			{ title: `Tailwind CSS`, icon: <TailwindIcon /> },
-			{ title: `TypeScript`, icon: <TypescriptIcon /> },
+			{ title: `Next.js`, icon: <Nextdotjs /> },
+			{ title: `React.js`, icon: <ReactJs /> },
+			{ title: `Firebase`, icon: <Firebase /> },
+			{ title: `D3.js`, icon: <DThreeDotjs /> },
+			{ title: `Tailwind CSS`, icon: <Tailwindcss /> },
+			{ title: `TypeScript`, icon: <Typescript /> },
 		],
 	},
 	{
@@ -42,11 +38,11 @@ const projects: Project[] = [
 		websiteUrl: `https://www.caleblovell.dev/`,
 		githubUrl: `https://github.com/CalebLovell/personal-site`,
 		tech: [
-			{ title: `Next.js`, icon: <NextIcon /> },
-			{ title: `React.js`, icon: <ReactIcon /> },
+			{ title: `Next.js`, icon: <Nextdotjs /> },
+			{ title: `React.js`, icon: <ReactJs /> },
 			{ title: `MDX`, icon: <MDXIcon /> },
-			{ title: `Tailwind CSS`, icon: <TailwindIcon /> },
-			{ title: `TypeScript`, icon: <TypescriptIcon /> },
+			{ title: `Tailwind CSS`, icon: <Tailwindcss /> },
+			{ title: `TypeScript`, icon: <Typescript /> },
 		],
 	},
 ];
