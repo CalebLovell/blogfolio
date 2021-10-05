@@ -54,14 +54,7 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 					</main>
 					<footer className='flex flex-row items-center justify-between w-full text-sm'>
 						<div className='flex flex-row items-center text-gray-200'>
-							<Image
-								src='/profile.jpg'
-								height={30}
-								width={30}
-								className='object-cover rounded-full'
-								placeholder='blur'
-								blurDataURL={`/${meta.image.url}`}
-							/>
+							<Image src='/profile.jpg' height={30} width={30} className='object-cover rounded-full' />
 							<p>
 								&nbsp;&nbsp;By Caleb Lovell
 								<time dateTime={meta.publishedAt} title={meta.publishedAt}>
