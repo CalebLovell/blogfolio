@@ -6,12 +6,12 @@ export const BlogPreview = ({ post }: { post: Blog }) => {
 		<article key={post.title} className='flex flex-col overflow-hidden rounded-md'>
 			<div className='w-full overflow-hidden'>
 				<Image
-					src={`/${post.image.url}`}
+					src={`/${post.image.url.substring(2)}`}
 					width={360}
 					height={220}
 					alt={post.image.alt}
 					placeholder='blur'
-					blurDataURL={`/${post.image.url}`}
+					blurDataURL={`/${post.image.url.substring(2)}`}
 					layout='responsive'
 					objectFit='cover'
 				/>
