@@ -1,6 +1,5 @@
 import { Blog } from 'pages/blog';
 import { CalendarIcon, ClockIcon } from '@heroicons/react/solid';
-import Image from 'next/image';
 
 export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 	return (
@@ -14,18 +13,8 @@ export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 							index === 0 ? `rounded-t-md` : index === blogs.length - 1 ? `rounded-b-md` : ``
 						}`}
 					>
-						<a href={`blog/${blog.slug}`} className='flex flex-col gap-4 sm:flex-row focus:outline-none'>
-							{/* TODO */}
-							<Image
-								className='h-full max-w-[11rem] object-cover rounded-md'
-								width={200}
-								height={100}
-								src={`/${blog.image.url.substring(2)}`}
-								alt={blog.image.alt}
-								placeholder='blur'
-								blurDataURL={`/${blog.image.url.substring(2)}`}
-							/>
-							<div className='flex flex-col w-full min-h-[6rem]'>
+						<a href={`blog/${blog.slug}`} className='flex flex-row gap-4 focus:outline-none'>
+							<div className='flex flex-col w-full'>
 								<p className='mr-3 text-lg font-medium text-gray-200'>{blog.title}</p>
 								<p className='space-x-2 text-sm font-semibold text-red-600'>
 									{blog.tags?.map(x => (
