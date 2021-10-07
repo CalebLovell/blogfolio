@@ -18,7 +18,7 @@ class MyDocument extends Document {
 					<meta name='msapplication-TileColor' content='#2b5797' />
 					<meta content='/favicons/browserconfig.xml' name='msapplication-config' /> */}
 				</Head>
-				<body className='overflow-y-scroll bg-gray-800'>
+				<body className='overflow-y-scroll bg-gray-900'>
 					<Main />
 					<NextScript />
 				</body>
