@@ -13,7 +13,11 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 						<div key={x.title} className='flex items-center px-3 py-1 bg-gray-900 rounded-md'>
 							<p className='text-gray-200 lg:text-lg'>{x.title}</p>
 							{/* Hack cuz the MDX icon is weird */}
-							{x.title === `MDX` ? <div className='ml-2 text-red-400'>{x.icon}</div> : <div className='w-4 ml-2 text-red-400 md:w-6'>{x.icon}</div>}
+							{x.title === `MDX` ? (
+								<div className='ml-2 text-red-400'>{x.icon}</div>
+							) : (
+								<div className='w-4 ml-2 text-red-400 md:w-6'>{x.icon}</div>
+							)}
 						</div>
 					))}
 				</div>
