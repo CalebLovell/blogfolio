@@ -51,14 +51,16 @@ export default function Projects() {
 	return (
 		<PageWrapper>
 			<HeroSection title='Projects' subtitle="A list of projects I've built" />
-			<section className='w-full px-3 my-8 space-y-8 md:px-5 md:space-y-10'>
-				{projects.map((x, index) => (
-					<>
-						<ProjectCard key={x.title} project={x} index={index} />
-						{index !== projects.length - 1 && <ProjectDivider />}
-					</>
-				))}
-			</section>
+			<div className='flex justify-center'>
+				<section className='max-w-4xl px-3 my-2 space-y-8 md:my-8 md:px-5 md:space-y-10'>
+					{projects.map((x, index) => (
+						<>
+							<ProjectCard key={x.title} project={x} />
+							{index !== projects.length - 1 && <ProjectDivider />}
+						</>
+					))}
+				</section>
+			</div>
 		</PageWrapper>
 	);
 }

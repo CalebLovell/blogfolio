@@ -4,21 +4,21 @@ import { useForm } from 'react-hook-form';
 import { RadioGroup } from '@headlessui/react';
 import { HeroSection } from '@components/HeroSection';
 
-const workPrompts = [
-	{ id: 0, message: `I'd like to work with you` },
-	{ id: 1, message: `I have a project idea for you` },
-	{ id: 2, message: `Other` },
-];
-
 const chatPrompts = [
 	{ id: 3, message: `Tell me about the project you're working on` },
 	{ id: 4, message: `Tell me the coolest thing you learned recently` },
 	{ id: 5, message: `Tell me whatever you want, I'm not your boss!` },
 ];
 
+const workPrompts = [
+	{ id: 0, message: `I'd like to work with you` },
+	{ id: 1, message: `I have a project idea for you` },
+	{ id: 2, message: `Other` },
+];
+
 export default function Contact() {
-	const [prompts, setPrompts] = React.useState(workPrompts);
-	const [selectedPrompt, setSelectedPrompt] = React.useState(workPrompts[0]);
+	const [prompts, setPrompts] = React.useState(chatPrompts);
+	const [selectedPrompt, setSelectedPrompt] = React.useState(chatPrompts[0]);
 
 	const { handleSubmit, register } = useForm({
 		defaultValues: {
@@ -43,16 +43,6 @@ export default function Contact() {
 					<div className='flex mt-4 text-sm leading-none text-white bg-gray-800 rounded-md'>
 						<button
 							className={`px-6 py-3 transition-colors duration-150 ease-in rounded-l-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
-								prompts[0].id === 0 ? `bg-red-700` : `bg-gray-800`
-							}`}
-							onClick={() => {
-								setPrompts(workPrompts);
-							}}
-						>
-							Work With Me
-						</button>
-						<button
-							className={`px-6 py-3 transition-colors duration-150 ease-in rounded-r-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
 								prompts[0].id === 3 ? `bg-red-700` : `bg-gray-800`
 							}`}
 							onClick={() => {
@@ -60,6 +50,16 @@ export default function Contact() {
 							}}
 						>
 							Just Say Hi
+						</button>
+						<button
+							className={`px-6 py-3 transition-colors duration-150 ease-in rounded-r-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
+								prompts[0].id === 0 ? `bg-red-700` : `bg-gray-800`
+							}`}
+							onClick={() => {
+								setPrompts(workPrompts);
+							}}
+						>
+							Work With Me
 						</button>
 					</div>
 				</HeroSection>

@@ -14,10 +14,10 @@ export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 							index === 0 ? `rounded-t-md` : index === blogs.length - 1 ? `rounded-b-md` : ``
 						}`}
 					>
-						<a href={`blog/${blog.slug}`} className='flex gap-4 focus:outline-none'>
+						<a href={`blog/${blog.slug}`} className='flex flex-col gap-4 sm:flex-row focus:outline-none'>
 							{/* TODO */}
 							<Image
-								className='hidden lg:block object-cover h-full max-w-[11rem] rounded-md'
+								className='h-full max-w-[11rem] object-cover rounded-md'
 								width={200}
 								height={100}
 								src={`/${blog.image.url.substring(2)}`}
