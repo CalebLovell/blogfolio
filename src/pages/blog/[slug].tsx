@@ -31,8 +31,8 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 
 	return (
 		<PageWrapper>
-			<div className='flex flex-col items-center w-full'>
-				<article className='flex flex-col items-center max-w-4xl p-10 my-4 bg-gray-800 rounded-md'>
+			<div className='flex justify-center'>
+				<article className='flex flex-col items-center max-w-4xl p-4 mx-3 my-2 bg-gray-800 rounded-md'>
 					<header className='w-full mb-4 space-y-4'>
 						<h1 className='text-3xl font-extrabold tracking-tight text-center text-gray-200 sm:text-4xl'>{meta.title}</h1>
 						<h2 className='text-lg text-center text-gray-400'>{meta.description}</h2>
@@ -55,7 +55,7 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 					<footer className='flex flex-row items-center justify-between w-full text-sm'>
 						<div className='flex flex-row items-center text-gray-200'>
 							<Image src='/profile.jpg' height={30} width={30} className='object-cover rounded-full' />
-							<p>
+							<p className='text-center'>
 								&nbsp;&nbsp;By Caleb Lovell
 								<time dateTime={meta.publishedAt} title={meta.publishedAt}>
 									&nbsp;&middot;&nbsp;{meta.publishedAt}
@@ -66,9 +66,9 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 							href={`https://github.com/CalebLovell/website/blob/main/posts/${meta.slug}.mdx`}
 							target='_blank'
 							rel='noreferrer'
-							className='p-2 text-gray-200 border-2 border-gray-200 rounded-md hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-gray-800'
+							className='p-2 text-center text-gray-200 border-2 border-gray-200 rounded-md hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-gray-800'
 						>
-							View This Post&apos;s Source Code Here
+							View Source Code
 						</a>
 					</footer>
 				</article>

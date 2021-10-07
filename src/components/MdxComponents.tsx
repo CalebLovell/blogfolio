@@ -22,11 +22,11 @@ export const MdxComponents = {
 		);
 	},
 	hr: (props: any) => <hr {...props} />,
-	ul: (props: any) => <ul className='mb-6' {...props} />,
-	ol: (props: any) => <ol className='pl-10 my-12 leading-7 list-decimal' {...props} />,
+	ul: (props: any) => <ul className='pl-4 my-4 leading-7 list-disc md:pl-10' {...props} />,
+	ol: (props: any) => <ol className='pl-4 my-4 leading-7 list-decimal md:pl-10' {...props} />,
 	li: (props: any) => (
 		<li
-			className='relative pl-7 my-3 before:absolute before:bg-gray-300 before:rounded-full before:w-1.5 before:h-1.5 before:left-1 before:top-2'
+			className='relative pl-2 my-3 sm:pl-7'
 			{...props}
 		/>
 	),

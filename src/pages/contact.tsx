@@ -42,7 +42,7 @@ export default function Contact() {
 				<HeroSection title='Contact Me' subtitle='I love meeting new people! Would you like to...'>
 					<div className='flex mt-4 text-sm leading-none text-white bg-gray-800 rounded-md'>
 						<button
-							className={`px-6 py-3 transition-colors duration-150 ease-in rounded-l-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
+							className={`px-3 sm:px-6 py-3 transition-colors duration-150 ease-in rounded-l-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
 								prompts[0].id === 3 ? `bg-red-700` : `bg-gray-800`
 							}`}
 							onClick={() => {
@@ -52,7 +52,7 @@ export default function Contact() {
 							Just Say Hi
 						</button>
 						<button
-							className={`px-6 py-3 transition-colors duration-150 ease-in rounded-r-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
+							className={`px-3 sm:px-6 py-3 transition-colors duration-150 ease-in rounded-r-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:z-10 focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800 ${
 								prompts[0].id === 0 ? `bg-red-700` : `bg-gray-800`
 							}`}
 							onClick={() => {
