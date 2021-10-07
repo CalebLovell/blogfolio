@@ -23,7 +23,7 @@ export const Header = () => {
 				<NextLink href='/'>
 					<a
 						href='/'
-						className='mx-2 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md sm:p-2 lg:px-4 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+						className='p-2 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md sm:mx-2 lg:px-4 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
 					>
 						Home
 					</a>
@@ -34,7 +34,7 @@ export const Header = () => {
 					<NextLink href={x.href} key={x.title}>
 						<a
 							href={x.href}
-							className='mx-2 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md sm:p-2 lg:px-4 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+							className='p-2 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md sm:mx-2 lg:px-4 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
 						>
 							{x.title}
 						</a>
