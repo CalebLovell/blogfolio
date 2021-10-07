@@ -12,7 +12,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 					{project.tech.map(x => (
 						<div key={x.title} className='flex items-center px-3 py-1 bg-gray-900 rounded-md'>
 							<p className='text-gray-200 lg:text-lg'>{x.title}</p>
-							<div className='text-red-400'>{x.icon}</div>
+							<div className='ml-2 text-red-400'>{x.icon}</div>
 						</div>
 					))}
 				</div>
