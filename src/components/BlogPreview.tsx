@@ -20,7 +20,7 @@ export const BlogPreview = ({ post }: { post: Blog }) => {
 				<section className='flex-1'>
 					<p className='space-x-2 text-sm font-medium text-red-600'>
 						{post.tags?.map(x => (
-							<span key={x}>{x}</span>
+							<span key={x}>#{x}</span>
 						))}
 					</p>
 					<a href={`blog/${post.slug}`} className='block mt-2'>

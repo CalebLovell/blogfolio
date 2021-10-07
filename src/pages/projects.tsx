@@ -2,7 +2,6 @@ import { HeroSection } from '@components/HeroSection';
 import { PageWrapper } from '@components/PageWrapper';
 import { ProjectCard } from '@components/ProjectCard';
 import { ProjectDivider } from '@components/ProjectDivider';
-import { MDXIcon } from '@components/svg/MDXIcon';
 
 import { Nextdotjs, Tailwindcss, Typescript, ReactJs, Firebase, DThreeDotjs } from '@icons-pack/react-simple-icons';
 
@@ -19,7 +18,7 @@ const projects: Project[] = [
 	{
 		title: `SteelPoll`,
 		description: `SteelPoll is a web app for making real-time, privacy-focused polls that you can share with your friends. You can vote with First Past The Post, Ranked Choice and STAR voting systems.`,
-		image: { url: `/steelpoll_results.png`, alt: `steelpoll results page` },
+		image: { url: `/steelpoll.png`, alt: `steelpoll results page` },
 		websiteUrl: `https://www.steelpoll.com/`,
 		githubUrl: `https://github.com/CalebLovell/steelpoll`,
 		tech: [
@@ -33,14 +32,13 @@ const projects: Project[] = [
 	},
 	{
 		title: `Caleb Lovell Personal Website`,
-		description: `My personal website is what you are viewing right now! It's a blog, portfolio, contact form, and space for me to experiment with new technologies too.`,
+		description: `My personal website is what you are viewing right now! It's a blog, portfolio, contact form, and space for me to experiment with stuff.`,
 		image: { url: `/steelpoll.png`, alt: `placeholder` },
 		websiteUrl: `https://www.caleblovell.dev/`,
 		githubUrl: `https://github.com/CalebLovell/personal-site`,
 		tech: [
 			{ title: `Next.js`, icon: <Nextdotjs /> },
 			{ title: `React.js`, icon: <ReactJs /> },
-			{ title: `MDX`, icon: <MDXIcon /> },
 			{ title: `Tailwind CSS`, icon: <Tailwindcss /> },
 			{ title: `TypeScript`, icon: <Typescript /> },
 		],
