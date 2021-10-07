@@ -35,7 +35,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 			</div>
 			<div className={`flex justify-end gap-2`}>
 				<a
-					className='flex text-center items-center px-2 md:px-4 py-1.5 text-sm font-medium text-gray-200 transition duration-150 ease-in-out bg-red-600 border-2 border-red-600 rounded-md lg:text-base hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
+					className='w-full sm:w-auto flex text-center justify-center items-center px-2 md:px-4 py-1.5 text-sm font-medium text-gray-200 transition duration-150 ease-in-out bg-red-600 border-2 border-red-600 rounded-md lg:text-base hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
 					href={project.websiteUrl}
 					target='_blank'
 					rel='noreferrer'
@@ -46,7 +46,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 					</svg>
 				</a>
 				<a
-					className='flex text-center items-center px-2 md:px-4 py-1.5 text-sm font-medium text-gray-200 transition duration-150 ease-in-out bg-transparent border-2 border-gray-400 rounded-md lg:text-base hover:bg-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
+					className='w-full sm:w-auto flex text-center justify-center items-center px-2 md:px-4 py-1.5 text-sm font-medium text-gray-200 transition duration-150 ease-in-out bg-transparent border-2 border-gray-400 rounded-md lg:text-base hover:bg-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
 					href={project.githubUrl}
 					target='_blank'
 					rel='noreferrer'
