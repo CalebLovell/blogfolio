@@ -18,6 +18,11 @@ const workPrompts = [
 	{ id: 2, message: `Other` },
 ];
 
+const metadata = {
+	title: `Contact Me`,
+	description: `Send me a message about work or just say hi!`,
+};
+
 export default function Contact() {
 	const [prompts, setPrompts] = React.useState(chatPrompts);
 	const [selectedPrompt, setSelectedPrompt] = React.useState(chatPrompts[0]);
@@ -40,7 +45,7 @@ export default function Contact() {
 	}
 
 	return (
-		<PageWrapper>
+		<PageWrapper metadata={metadata}>
 			<div className='px-3 md:px-5'>
 				<HeroSection title='Contact Me' subtitle='I love meeting new people! Would you like to...'>
 					<div className='flex mt-4 text-sm leading-none text-white bg-gray-800 rounded-md'>

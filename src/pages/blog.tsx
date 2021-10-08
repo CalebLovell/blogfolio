@@ -14,9 +14,14 @@ export interface Blog {
 	readingTime: string;
 }
 
+const metadata = {
+	title: `Caleb Lovell's Blog`,
+	description: `Posts about tech, travel, languages, books, etc.`,
+};
+
 export default function Blog({ blogs }: { blogs: Blog[] }) {
 	return (
-		<PageWrapper>
+		<PageWrapper metadata={metadata}>
 			<HeroSection title='Blog' subtitle='All my articles on tech, languages, travel, etc' />
 			<section className='grid gap-5 mx-3 my-4 md:mx-5 sm:grid-cols-2 lg:grid-cols-3 max-w-none'>
 				{blogs?.map(post => (

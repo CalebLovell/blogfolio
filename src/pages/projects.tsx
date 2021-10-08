@@ -45,9 +45,14 @@ const projects: Project[] = [
 	},
 ];
 
+const metadata = {
+	title: `Caleb Lovell's Projects Portfolio`,
+	description: `Check out some of the website I've built`,
+};
+
 export default function Projects() {
 	return (
-		<PageWrapper>
+		<PageWrapper metadata={metadata}>
 			<HeroSection title='Projects' subtitle="A list of projects I've built" />
 			<div className='flex justify-center'>
 				<section className='max-w-4xl px-3 my-2 space-y-8 md:my-8 md:px-5 md:space-y-10'>

@@ -1,10 +1,15 @@
 import { PageWrapper } from '@components/PageWrapper';
 import { useRouter } from 'next/router';
 
+const metadata = {
+	title: `Error 404`,
+	description: `This page could not be found!`,
+};
+
 const Custom404 = () => {
 	const router = useRouter();
 	return (
-		<PageWrapper>
+		<PageWrapper metadata={metadata}>
 			<main className='flex flex-col items-center justify-center space-y-3 text-center min-h-content'>
 				<p className='text-sm font-semibold tracking-wide text-red-600 uppercase'>404 error</p>
 				<h1 className='text-4xl font-extrabold text-gray-200 sm:text-5xl'>Page not found.</h1>

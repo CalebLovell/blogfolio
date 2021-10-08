@@ -29,8 +29,13 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 	// This is a bit weird, but this is how mdx-bundler recommends it.
 	const Component = React.useMemo(() => getMDXComponent(code), [code]);
 
+	const metadata = {
+		title: meta.title,
+		description: meta.description,
+	};
+
 	return (
-		<PageWrapper>
+		<PageWrapper metadata={metadata}>
 			<div className='flex justify-center'>
 				<article className='flex flex-col items-center max-w-4xl p-4 mx-3 my-2 bg-gray-800 rounded-md'>
 					<header className='w-full mb-4 space-y-4'>

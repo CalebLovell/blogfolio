@@ -16,8 +16,8 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 	const router = useRouter();
 
 	const defaultMetadata = {
-		title: `Caleb Lovell Blog`,
-		description: `Posts about tech, travel, languages, books, etc.`,
+		title: `Caleb Lovell's Blogfolio`,
+		description: `Check out my projects, read the blog, or send me a message!`,
 		image: ``,
 		...metadata,
 	};
