@@ -22,8 +22,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 				components={{ Toast, ToastContainer }}
 				placement='bottom-center'
 				transitionDuration={100}
-				autoDismiss={false}
-				autoDismissTimeout={100000}
+				autoDismiss={true}
+				autoDismissTimeout={10000}
 			>
 				<Component {...pageProps} />
 			</ToastProvider>
