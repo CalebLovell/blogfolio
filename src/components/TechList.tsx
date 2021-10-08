@@ -44,7 +44,7 @@ const backend = [
 export const TechList = () => {
 	return (
 		<>
-			<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Frontend Tech</h3>
+			<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Frontend Tech Stack</h3>
 			<ul className='grid grid-cols-2 text-red-400 sm:grid-cols-4 md:grid-cols-5 gap-x-3 gap-y-3'>
 				{frontend.map(x => (
 					<div key={x.title} className='flex flex-col items-center justify-center w-full h-full px-1 py-4 bg-gray-800 rounded-md'>
@@ -53,7 +53,7 @@ export const TechList = () => {
 					</div>
 				))}
 			</ul>
-			<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Backend Tech</h3>
+			<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Backend Tech Stack</h3>
 			<ul className='grid grid-cols-2 text-red-400 sm:grid-cols-4 md:grid-cols-5 gap-x-3 gap-y-3'>
 				{backend.map(x => (
 					<div key={x.title} className='flex flex-col items-center justify-center w-full h-full px-1 py-4 bg-gray-800 rounded-md'>

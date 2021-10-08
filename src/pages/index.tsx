@@ -14,7 +14,7 @@ export default function Home({ blogs }) {
 				</div>
 				<HeroSection
 					title="Hey there! I'm Caleb Lovell"
-					subtitle='As a dev, I love building beautiful, accessible applications. But in my free you can find me reading, learning languages, traveling or hiking in the mountains!'
+					subtitle='As a developer, I love building beautiful, accessible apps. In my freetime, you can find me reading, learning languages, traveling or hiking in the mountains!'
 				/>
 				<section className='flex flex-col items-center'>
 					<div className='w-full'>
