@@ -44,7 +44,7 @@ export const Footer = () => {
 	return (
 		<footer className='flex flex-col items-center w-full p-5 space-y-6 max-w-7xl'>
 			<div className='flex flex-col w-full justify-evenly md:flex-row md:items-center md:justify-between'>
-				<p className='text-base text-center text-gray-200'>
+				<p className='hidden text-base text-center text-gray-200 md:block'>
 					Built with Next.js, TailwindCSS and MDX.
 					<a
 						href='https://github.com/CalebLovell/website'

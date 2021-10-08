@@ -3,25 +3,24 @@ import NextLink from 'next/link';
 import React from 'react';
 
 export const MdxComponents = {
-	h1: (props: any) => <h1 className='mt-8 mb-4 text-4xl font-bold' {...props} />,
-	h2: (props: any) => <h2 className='mt-8 mb-3 text-2xl font-bold' {...props} />,
-	h3: (props: any) => <h3 className='mt-8 mb-5 text-xl font-bold' {...props} />,
+	h1: (props: any) => <h1 className='mt-4 mb-4 text-4xl font-bold' {...props} />,
+	h2: (props: any) => <h2 className='mt-4 mb-3 text-2xl font-bold' {...props} />,
+	h3: (props: any) => <h3 className='mt-4 mb-5 text-xl font-bold' {...props} />,
 	h4: (props: any) => <h4 className='mt-6 mb-5 text-lg font-bold' {...props} />,
 	p: (props: any) => <p className='mb-5 leading-7' {...props} />,
 	a: ({ href = ``, ...props }) => {
 		if (href.startsWith(`http`)) {
 			return (
-				<a className='font-medium transition-colors text-sky-500 hover:text-sky-700' href={href} target='_blank' rel='noreferrer' {...props} />
+				<a className='font-medium text-blue-500 transition-colors hover:text-blue-700' href={href} target='_blank' rel='noreferrer' {...props} />
 			);
 		}
 
 		return (
 			<NextLink href={href} passHref>
-				<a className='font-medium transition-colors text-sky-500 hover:text-sky-700' {...props} />
+				<a className='font-medium text-blue-500 transition-colors hover:text-blue-700' {...props} />
 			</NextLink>
 		);
 	},
-	hr: (props: any) => <hr {...props} />,
 	ul: (props: any) => <ul className='pl-4 my-4 leading-7 list-disc md:pl-10' {...props} />,
 	ol: (props: any) => <ol className='pl-4 my-4 leading-7 list-decimal md:pl-10' {...props} />,
 	li: (props: any) => (
@@ -44,8 +43,6 @@ export const MdxComponents = {
 	),
 	blockquote: (props: any) => <blockquote className='pl-8 my-4 italic font-medium border-l-2 border-gray-200' {...props} />,
 	del: (props: any) => <del className='line-through' {...props} />,
-
-	// TODO:
 	pre: ({ children, ...props }: { children: React.ReactNode }) => {
 		return (
 			<pre className='' {...props}>
@@ -54,6 +51,6 @@ export const MdxComponents = {
 		);
 	},
 	code: ({ children }: { children: React.ReactNode }) => {
-		return <code className='px-1.5 py-0.5 text-sm font-mono font-medium bg-sky-100 rounded-md'>{children}</code>;
+		return <code className='px-1.5 py-0.5 text-sm font-mono font-medium bg-red-100 rounded-md'>{children}</code>;
 	},
 };

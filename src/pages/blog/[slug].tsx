@@ -53,20 +53,17 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 						<Component components={MdxComponents} />
 					</main>
 					<footer className='flex flex-row items-center justify-between w-full text-sm'>
-						<div className='flex flex-row items-center text-gray-200'>
-							<Image src='/profile.jpg' height={30} width={30} className='object-cover rounded-full' />
-							<p className='text-center'>
-								&nbsp;&nbsp;By Caleb Lovell
-								<time dateTime={meta.publishedAt} title={meta.publishedAt}>
-									&nbsp;&middot;&nbsp;{meta.publishedAt}
-								</time>
-							</p>
-						</div>
+						<p className='text-center text-gray-200'>
+							By Caleb Lovell
+							<time dateTime={meta.publishedAt} title={meta.publishedAt}>
+								&nbsp;&middot;&nbsp;{meta.publishedAt}
+							</time>
+						</p>
 						<a
 							href={`https://github.com/CalebLovell/website/blob/main/posts/${meta.slug}.mdx`}
 							target='_blank'
 							rel='noreferrer'
-							className='p-2 text-center text-gray-200 border-2 border-gray-200 rounded-md hover:text-red-500 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-gray-800'
+							className='flex text-center justify-center items-center px-4 py-1.5 text-sm font-medium text-gray-200 transition duration-150 ease-in-out bg-red-600 border-2 border-red-600 rounded-md lg:text-base hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
 						>
 							View Source Code
 						</a>
