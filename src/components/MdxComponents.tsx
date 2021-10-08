@@ -11,13 +11,13 @@ export const MdxComponents = {
 	a: ({ href = ``, ...props }) => {
 		if (href.startsWith(`http`)) {
 			return (
-				<a className='font-medium text-blue-500 transition-colors hover:text-blue-700' href={href} target='_blank' rel='noreferrer' {...props} />
+				<a className='font-medium text-red-500 transition-colors hover:text-red-700' href={href} target='_blank' rel='noreferrer' {...props} />
 			);
 		}
 
 		return (
 			<NextLink href={href} passHref>
-				<a className='font-medium text-blue-500 transition-colors hover:text-blue-700' {...props} />
+				<a className='font-medium text-red-500 transition-colors hover:text-red-700' {...props} />
 			</NextLink>
 		);
 	},

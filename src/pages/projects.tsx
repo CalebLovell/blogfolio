@@ -33,7 +33,7 @@ const projects: Project[] = [
 	{
 		title: `Caleb Lovell's Blogfolio`,
 		description: `My personal website is what you are viewing right now! It's a blog, portfolio, contact form, and space for me to experiment with stuff.`,
-		image: { url: `/steelpoll.png`, alt: `placeholder` },
+		image: { url: `/blogfolio.png`, alt: `placeholder` },
 		websiteUrl: `https://www.caleblovell.dev/`,
 		githubUrl: `https://github.com/CalebLovell/personal-site`,
 		tech: [
