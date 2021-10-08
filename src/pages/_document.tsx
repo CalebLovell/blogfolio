@@ -5,7 +5,7 @@ class MyDocument extends Document {
 		return (
 			<Html lang='en'>
 				<Head>
-					{/* <link rel='preload' href='/fonts/inter-var.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
+					<link rel='preload' href='/fonts/inter-var.ttf' as='font' type='font/ttf' crossOrigin='anonymous' />
 					<link rel='icon' href='/favicons/favicon.ico' />
 					<link href='/favicons/favicon.ico' rel='shortcut icon' />
 					<link href='/favicons/site.webmanifest' rel='manifest' />
@@ -16,7 +16,7 @@ class MyDocument extends Document {
 					<link rel='mask-icon' href='/favicons/safari-pinned-tab.svg' color='#5bbad5' />
 					<meta name='theme-color' content='#ffffff' />
 					<meta name='msapplication-TileColor' content='#2b5797' />
-					<meta content='/favicons/browserconfig.xml' name='msapplication-config' /> */}
+					<meta content='/favicons/browserconfig.xml' name='msapplication-config' />
 				</Head>
 				<body className='overflow-y-scroll bg-gray-900'>
 					<Main />
