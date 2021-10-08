@@ -18,7 +18,7 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 	const defaultMetadata = {
 		title: `Caleb Lovell's Blogfolio`,
 		description: `Check out my projects, read the blog, or send me a message!`,
-		image: ``,
+		image: `https://www.caleblovell.com/favicons/mstile-144x144.png`,
 		...metadata,
 	};
 	const { title, description, image } = defaultMetadata;
@@ -39,7 +39,7 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 					<meta property='og:image:width' content='1200' />
 					<meta property='og:image:height' content='627' />
 					<meta property='og:image:type' content='image/png' />
-					<meta name='twitter:card' content='summary_large_image' />
+					<meta name='twitter:card' content='summary' />
 					<meta name='twitter:site' content='@Caleb__Lovell' />
 					<meta name='twitter:title' content={title} />
 					<meta name='twitter:image' content={image} />
