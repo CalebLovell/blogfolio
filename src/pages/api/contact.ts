@@ -23,11 +23,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 	};
 
 	try {
-		// transporter.sendMail(email, (err, info) => {
-		// 	if (err) console.log(err);
-		// else res.status(200).json({ message: info });
-		res.status(200).json({ message: `hi` });
-		// });
+		transporter.sendMail(email, (err, info) => {
+			if (err) console.log(err);
+			else res.status(200).json({ message: info });
+		});
 	} catch (err) {
 		res.status(500).json({ error: err.message });
 	}

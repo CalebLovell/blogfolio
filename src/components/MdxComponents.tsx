@@ -23,12 +23,7 @@ export const MdxComponents = {
 	},
 	ul: (props: any) => <ul className='pl-4 my-4 leading-7 list-disc md:pl-10' {...props} />,
 	ol: (props: any) => <ol className='pl-4 my-4 leading-7 list-decimal md:pl-10' {...props} />,
-	li: (props: any) => (
-		<li
-			className='relative pl-2 my-3 sm:pl-7'
-			{...props}
-		/>
-	),
+	li: (props: any) => <li className='relative pl-2 my-3 sm:pl-7' {...props} />,
 	strong: (props: any) => <strong className='font-semibold' {...props} />,
 	Image: ({ children, ...props }: { children: React.ReactNode }) => (
 		<figure className='my-5'>
