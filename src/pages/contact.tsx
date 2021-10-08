@@ -3,6 +3,8 @@ import { PageWrapper } from '@components/PageWrapper';
 import { useForm } from 'react-hook-form';
 import { RadioGroup } from '@headlessui/react';
 import { HeroSection } from '@components/HeroSection';
+import { useSendEmail } from 'api/sendEmail';
+import { LoadingSpinner } from '@components/LoadingSpinner';
 
 const chatPrompts = [
 	{ id: 3, message: `Tell me about the project you're working on` },
@@ -19,7 +21,6 @@ const workPrompts = [
 export default function Contact() {
 	const [prompts, setPrompts] = React.useState(chatPrompts);
 	const [selectedPrompt, setSelectedPrompt] = React.useState(chatPrompts[0]);
-
 	const { handleSubmit, register } = useForm({
 		defaultValues: {
 			name: ``,
@@ -28,8 +29,10 @@ export default function Contact() {
 		},
 	});
 
+	const { mutate, isLoading } = useSendEmail();
+
 	const onSubmit = (rawFormData: any) => {
-		console.log({ ...rawFormData, prompt: selectedPrompt });
+		mutate({ ...rawFormData, prompt: selectedPrompt });
 	};
 
 	function classNames(...classes) {
@@ -149,11 +152,12 @@ export default function Contact() {
 						</div>
 						<button
 							type='submit'
-							// disabled={isLoading || pageIsLoading}
+							disabled={isLoading}
 							className='inline-flex items-center px-4 py-2 mt-4 text-sm font-medium leading-4 text-white bg-gray-800 border-2 border-gray-800 rounded-md hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-600 focus:ring-offset-gray-800'
+							onSubmit={onSubmit}
 						>
 							Submit
-							{/* {isLoading && <LoadingSpinner />} */}
+							{isLoading && <LoadingSpinner />}
 						</button>
 					</form>
 				</section>

@@ -17,14 +17,19 @@
 		"@heroicons/react": "^1.0.4",
 		"@icons-pack/react-simple-icons": "^4.6.1",
 		"@tailwindcss/line-clamp": "^0.2.2",
+		"axios": "^0.22.0",
+		"dotenv": "^10.0.0",
 		"esbuild": "^0.12.19",
 		"gray-matter": "^4.0.3",
 		"mdx-bundler": "^5.2.1",
 		"next": "11.0.1",
 		"next-plausible": "^2.0.0",
+		"nodemailer": "^6.6.5",
 		"react": "17.0.2",
 		"react-dom": "17.0.2",
-		"react-hook-form": "^7.12.2"
+		"react-hook-form": "^7.12.2",
+		"react-query": "^3.25.1",
+		"react-toast-notifications": "^2.5.1"
 	},
 	"devDependencies": {
 		"@types/glob": "^7.1.4",
