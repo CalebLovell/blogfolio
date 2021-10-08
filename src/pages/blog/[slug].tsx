@@ -37,7 +37,7 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 	return (
 		<PageWrapper metadata={metadata}>
 			<div className='flex justify-center'>
-				<article className='flex flex-col items-center max-w-4xl p-4 mx-3 my-2 bg-gray-800 rounded-md'>
+				<article className='flex flex-col items-center max-w-4xl p-4 py-8 mx-3 my-2 bg-gray-800 rounded-md'>
 					<header className='w-full mb-4 space-y-4'>
 						<h1 className='text-3xl font-extrabold tracking-tight text-center text-gray-200 sm:text-4xl'>{meta.title}</h1>
 						<h2 className='text-lg text-center text-gray-400'>{meta.description}</h2>

@@ -1,0 +1,35 @@
+---
+title: 'Making Your Website Shareable in Discord'
+description: 'Using the correct meta tags is important for making your website shareable within Discord'
+slug: 'discord-meta-tags'
+tags: ['Tech']
+image: { url: './discord.jpg', alt: 'discord logo' }
+publishedAt: '10-7-2021'
+updatedAt: '10-7-2021'
+readingTime: '2 minutes'
+---
+
+### Intro
+
+If you are trying to share a website on social media, you will need to add `<meta>` tags to your page. Discord is no exception, but if you have ever tried to actually share a new website link on Discord, you might have had trouble getting it to show up. That may be because you aren't using the correct meta tags!
+
+### Explanation
+
+As far as I know, there is no public documentation from Discord on how to set up `<meta` tags that work on their service. The only thing I have found is this [tweet](https://twitter.com/discord/status/952834253842153472) which confirms that they follow the standard [Open Graph Protocol](https://ogp.me/).
+
+However, if you just use the regular `<meta>` tags, your image might look weird or not show up at all on Discord. That may be because Discord actually uses Twitter's unique tags that they document [here](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/markup).
+
+That's actually great news, because in my opinion, Twitter actually has a better system for customizing your website's shareable preview. You'll want to read through the docs yourself to make it work exactly right, but basically you can choose between different sized previews.
+
+### Here's an example of what the tags might look like:
+
+##### `<meta name='twitter:card' content='summary' />`
+##### `<meta name='twitter:site' content='@YourTwitterUsername' />`
+##### `<meta name='twitter:title' content='Example Webpage Title' />`
+##### `<meta name='twitter:description' content='Example Webpage Description' />`
+##### `<meta name='twitter:image' content='/path_to_your_preview_image.png' />`
+##### `<meta name='twitter:image:alt' content='alt text of your image' />`
+
+### Summary
+
+If you aren't using Twitter's special meta tags on your meta, you won't be able to show things as expected on Discord.

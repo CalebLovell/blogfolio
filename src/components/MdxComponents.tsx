@@ -46,6 +46,6 @@ export const MdxComponents = {
 		);
 	},
 	code: ({ children }: { children: React.ReactNode }) => {
-		return <code className='px-1.5 py-0.5 text-sm font-mono font-medium rounded-md'>{children}</code>;
+		return <code className='px-1.5 py-0.5 text-sm font-mono font-medium rounded-md bg-gray-700'>{children}</code>;
 	},
 };

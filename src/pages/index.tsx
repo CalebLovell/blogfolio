@@ -33,7 +33,7 @@ export const getStaticProps = () => {
 	const allBlogs = getAllPostsMeta();
 	return {
 		props: {
-			blogs: allBlogs?.slice(0, 2),
+			blogs: allBlogs?.slice(0, 3),
 		},
 	};
 };
