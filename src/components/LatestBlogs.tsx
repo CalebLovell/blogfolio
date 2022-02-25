@@ -1,5 +1,6 @@
 import { Blog } from 'pages/blog';
 import { CalendarIcon, ClockIcon } from '@heroicons/react/solid';
+import { format } from 'date-fns';
 
 export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 	return (
@@ -29,7 +30,7 @@ export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 									className='flex items-center flex-shrink-0 text-sm font-semibold text-gray-300 whitespace-nowrap'
 								>
 									<CalendarIcon className='flex-shrink-0 mr-1.5 h-5 w-5 text-gray-300' aria-hidden='true' />
-									{blog.publishedAt}
+									{format(new Date(blog.publishedAt), `MMM do, yyyy`)}
 								</time>
 								<p className='flex items-center flex-shrink-0 text-sm font-semibold text-gray-300 whitespace-nowrap'>
 									<ClockIcon className='flex-shrink-0 mr-1.5 h-5 w-5 text-gray-300' aria-hidden='true' />

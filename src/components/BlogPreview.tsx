@@ -1,5 +1,6 @@
 import { Blog } from 'pages/blog';
 import Image from 'next/image';
+import { format } from 'date-fns';
 
 export const BlogPreview = ({ post }: { post: Blog }) => {
 	return (
@@ -36,7 +37,7 @@ export const BlogPreview = ({ post }: { post: Blog }) => {
 					<div className='ml-3'>
 						<p className='text-sm font-medium text-gray-400'>Caleb Lovell</p>
 						<div className='flex space-x-1 text-sm text-gray-500'>
-							<time dateTime={post.publishedAt}>{post.publishedAt}</time>
+							<time dateTime={post.publishedAt}>{format(new Date(post.publishedAt), `MMM do, yyyy`)}</time>
 							<span aria-hidden='true'>&middot;</span>
 							<span>{post.readingTime} read</span>
 						</div>
