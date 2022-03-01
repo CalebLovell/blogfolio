@@ -34,7 +34,7 @@ export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 								</time>
 								<p className='flex items-center flex-shrink-0 text-sm font-semibold text-gray-300 whitespace-nowrap'>
 									<ClockIcon className='flex-shrink-0 mr-1.5 h-5 w-5 text-gray-300' aria-hidden='true' />
-									{blog.readingTime}
+									{blog.readingTime} to read
 								</p>
 							</div>
 						</a>
