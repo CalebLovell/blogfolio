@@ -26,7 +26,7 @@ const metadata = {
 export default function Contact() {
 	const [prompts, setPrompts] = React.useState(chatPrompts);
 	const [selectedPrompt, setSelectedPrompt] = React.useState(chatPrompts[0]);
-	const { handleSubmit, register } = useForm({
+	const { handleSubmit, register, reset } = useForm({
 		defaultValues: {
 			name: ``,
 			email: ``,
@@ -37,7 +37,15 @@ export default function Contact() {
 	const { mutate, isLoading } = useSendEmail();
 
 	const onSubmit = (rawFormData: any) => {
-		mutate({ ...rawFormData, prompt: selectedPrompt });
+		mutate(
+			{ ...rawFormData, prompt: selectedPrompt },
+			{
+				onSuccess: () => {
+					reset();
+					setSelectedPrompt(chatPrompts[0]);
+				},
+			}
+		);
 	};
 
 	function classNames(...classes) {
