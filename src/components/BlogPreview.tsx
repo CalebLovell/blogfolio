@@ -39,7 +39,7 @@ export const BlogPreview = ({ post }: { post: Blog }) => {
 						<div className='flex space-x-1 text-sm text-gray-500'>
 							<time dateTime={post.publishedAt}>{format(new Date(post.publishedAt), `MMM do, yyyy`)}</time>
 							<span aria-hidden='true'>&middot;</span>
-							<span>{post.readingTime} read</span>
+							<span>{post.readingTime} to read</span>
 						</div>
 					</div>
 				</footer>
