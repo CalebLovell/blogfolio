@@ -4,6 +4,7 @@ import { ProjectCard } from '@components/ProjectCard';
 import { ProjectDivider } from '@components/ProjectDivider';
 
 import { Nextdotjs, Tailwindcss, Typescript, ReactJs, Firebase, DThreeDotjs } from '@icons-pack/react-simple-icons';
+import { Fragment } from 'react';
 
 export interface Project {
 	title: string;
@@ -57,10 +58,10 @@ export default function Projects() {
 			<div className='flex justify-center'>
 				<section className='max-w-4xl px-3 my-2 space-y-8 md:my-8 md:px-5 md:space-y-10'>
 					{projects.map((x, index) => (
-						<>
-							<ProjectCard key={x.title} project={x} />
+						<Fragment key={x.title}>
+							<ProjectCard project={x} />
 							{index !== projects.length - 1 && <ProjectDivider />}
-						</>
+						</Fragment>
 					))}
 				</section>
 			</div>
