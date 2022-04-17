@@ -11,7 +11,7 @@ const nav = [
 		href: `/projects`,
 	},
 	{
-		title: `Contact Me`,
+		title: `Contact`,
 		href: `/contact`,
 	},
 ];
