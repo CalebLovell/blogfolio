@@ -29,7 +29,7 @@ export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 									dateTime={blog.publishedAt}
 									className='flex items-center flex-shrink-0 text-sm font-semibold text-gray-300 whitespace-nowrap'
 								>
-									{format(new Date(blog.publishedAt), `MMM do, yyyy`)}
+									{blog.publishedAt ? format(new Date(blog.publishedAt), `MMM do, yyyy`) : format(new Date(), `MMM do, yyyy`)}
 								</time>
 								<p className='flex items-center flex-shrink-0 text-sm font-semibold text-gray-300 whitespace-nowrap'>
 									<BookOpenIcon className='flex-shrink-0 mr-1.5 h-5 w-5 text-gray-300' aria-hidden='true' />

@@ -62,7 +62,8 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 						<p className='text-center text-gray-200'>
 							By Caleb Lovell
 							<time dateTime={meta.publishedAt} title={meta.publishedAt}>
-								&nbsp;&middot;&nbsp;{format(new Date(meta.publishedAt), `MMM do, yyyy`)}
+								&nbsp;&middot;&nbsp;
+								{meta.publishedAt ? format(new Date(meta.publishedAt), `MMM do, yyyy`) : format(new Date(), `MMM do, yyyy`)}
 							</time>
 						</p>
 						<a
