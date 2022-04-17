@@ -6,7 +6,6 @@ import Image from 'next/image';
 import React from 'react';
 import { PageWrapper } from '@components/PageWrapper';
 import { Blog } from 'pages/blog';
-import { format } from 'date-fns';
 
 export const getStaticPaths = () => {
 	const posts = getAllPostsMeta();
@@ -63,7 +62,7 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 							By Caleb Lovell
 							<time dateTime={meta.publishedAt} title={meta.publishedAt}>
 								&nbsp;&middot;&nbsp;
-								{meta.publishedAt ? format(new Date(meta.publishedAt), `MMM do, yyyy`) : format(new Date(), `MMM do, yyyy`)}
+								{meta.publishedAt}
 							</time>
 						</p>
 						<a

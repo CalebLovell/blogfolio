@@ -19,7 +19,6 @@
 		"@sentry/nextjs": "^6.19.6",
 		"@tailwindcss/line-clamp": "^0.2.2",
 		"axios": "^0.22.0",
-		"date-fns": "^2.28.0",
 		"dotenv": "^10.0.0",
 		"esbuild": "^0.12.19",
 		"gray-matter": "^4.0.3",
