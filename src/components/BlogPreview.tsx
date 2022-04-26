@@ -40,9 +40,7 @@ export const BlogPreview = ({ post }: { post: Blog }) => {
 						<div className='ml-3'>
 							<p className='text-sm font-medium text-gray-400'>Caleb Lovell</p>
 							<div className='flex space-x-1 text-sm text-gray-500'>
-								<time dateTime={post.publishedAt}>
-									{post.publishedAt}
-								</time>
+								<time dateTime={post.publishedAt}>{post.publishedAt}</time>
 								<span aria-hidden='true'>&middot;</span>
 								<span>{post.readingTime} to read</span>
 							</div>
