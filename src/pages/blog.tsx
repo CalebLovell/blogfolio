@@ -4,6 +4,7 @@ import { PageWrapper } from '@components/PageWrapper';
 import { getAllPostsMeta } from '@utils/mdx';
 
 export interface Blog {
+	index: number;
 	title: string;
 	description: string;
 	slug: string;
@@ -34,9 +35,10 @@ export default function Blog({ blogs }: { blogs: Blog[] }) {
 
 export const getStaticProps = () => {
 	const blogs = getAllPostsMeta();
+	const sortedBlogs = blogs.sort((a, b) => b.index - a.index);
 	return {
 		props: {
-			blogs,
+			blogs: sortedBlogs,
 		},
 	};
 };

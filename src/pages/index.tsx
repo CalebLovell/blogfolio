@@ -30,10 +30,11 @@ export default function Home({ blogs }) {
 }
 
 export const getStaticProps = () => {
-	const allBlogs = getAllPostsMeta();
+	const blogs = getAllPostsMeta();
+	const sortedBlogs = blogs.sort((a, b) => b.index - a.index);
 	return {
 		props: {
-			blogs: allBlogs?.slice(0, 3),
+			blogs: sortedBlogs.slice(0, 3),
 		},
 	};
 };
