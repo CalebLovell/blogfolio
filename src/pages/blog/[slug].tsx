@@ -69,7 +69,6 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 								<div className='flex space-x-1 text-sm text-gray-500'>
 									<time dateTime={meta.publishedAt}>{meta.publishedAt}</time>
 									<span aria-hidden='true'>&middot;</span>
-									<span>{meta.readingTime} to read</span>
 								</div>
 							</div>
 						</div>
@@ -77,7 +76,7 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 							href={`https://github.com/CalebLovell/website/blob/main/posts/${meta.slug}.mdx`}
 							target='_blank'
 							rel='noreferrer'
-							className='flex text-center justify-center items-center px-4 py-1.5 text-sm font-medium text-gray-200 transition duration-150 ease-in-out bg-red-600 border-2 border-red-600 rounded-md lg:text-base hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
+							className='flex text-center justify-center items-center px-2 md:px-4 py-1.5 text-sm font-medium text-gray-200 transition duration-150 ease-in-out bg-red-600 border-2 border-red-600 rounded-md lg:text-base hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
 						>
 							View Source Code
 						</a>
