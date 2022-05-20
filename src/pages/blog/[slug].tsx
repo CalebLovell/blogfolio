@@ -57,14 +57,22 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 					<main className='w-full text-gray-200'>
 						<Component components={MdxComponents} />
 					</main>
+
 					<footer className='flex flex-row items-center justify-between w-full text-sm'>
-						<p className='text-center text-gray-200'>
-							By Caleb Lovell
-							<time dateTime={meta.publishedAt} title={meta.publishedAt}>
-								&nbsp;&middot;&nbsp;
-								{meta.publishedAt}
-							</time>
-						</p>
+						<div className='flex'>
+							<div className='flex items-center justify-center flex-shrink-0'>
+								<span className='sr-only'>Caleb Lovell</span>
+								<Image className='object-cover rounded-full' height={40} width={40} src='/profile.jpg' alt='profile' />
+							</div>
+							<div className='ml-3'>
+								<p className='text-sm font-medium text-gray-400'>Caleb Lovell</p>
+								<div className='flex space-x-1 text-sm text-gray-500'>
+									<time dateTime={meta.publishedAt}>{meta.publishedAt}</time>
+									<span aria-hidden='true'>&middot;</span>
+									<span>{meta.readingTime} to read</span>
+								</div>
+							</div>
+						</div>
 						<a
 							href={`https://github.com/CalebLovell/website/blob/main/posts/${meta.slug}.mdx`}
 							target='_blank'

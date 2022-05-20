@@ -7,7 +7,7 @@ export const BlogPreview = ({ post }: { post: Blog }) => {
 			className='transition duration-150 ease-in-out rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-4 focus:ring-offset-gray-800'
 			href={`blog/${post.slug}`}
 		>
-			<article key={post.title} className='flex flex-col overflow-hidden rounded-md'>
+			<article key={post.title} className='flex flex-col h-full overflow-hidden rounded-md'>
 				<div className='w-full overflow-hidden'>
 					<Image
 						src={`/${post.image.url.substring(2)}`}
@@ -20,7 +20,7 @@ export const BlogPreview = ({ post }: { post: Blog }) => {
 						objectFit='cover'
 					/>
 				</div>
-				<div className='flex flex-col justify-between flex-1 p-4 bg-gray-800'>
+				<div className='flex flex-col justify-between flex-1 h-full p-4 bg-gray-800'>
 					<section className='flex-1'>
 						<p className='space-x-2 text-sm font-medium text-red-600'>
 							{post.tags?.map(x => (
