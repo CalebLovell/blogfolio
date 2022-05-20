@@ -18,10 +18,11 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 	const defaultMetadata = {
 		title: `Caleb Lovell's Blogfolio`,
 		description: `Check out my projects, read the blog, or send me a message!`,
-		image: `https://www.caleblovell.com/CL.png`,
+		image: `/CL.png`,
 		...metadata,
 	};
 	const { title, description, image } = defaultMetadata;
+	const imageUrl = `https://www.caleblovell.com${image}`;
 
 	return (
 		<>
@@ -35,14 +36,14 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 					<link rel='canonical' href={`https://www.caleblovell.com${router.asPath}`} />
 					<meta property='og:site_name' content='Caleb Lovell' />
 					<meta property='og:type' content='website' />
-					<meta property='og:image' content={image} />
+					<meta property='og:image' content={imageUrl} />
 					<meta property='og:image:width' content='320' />
 					<meta property='og:image:height' content='320' />
 					<meta property='og:image:type' content='image/png' />
 					<meta name='twitter:card' content='summary' />
 					<meta name='twitter:site' content='@Caleb__Lovell' />
 					<meta name='twitter:title' content={title} />
-					<meta name='twitter:image' content={image} />
+					<meta name='twitter:image' content={imageUrl} />
 					<meta name='twitter:description' content={description} />
 					<meta name='twitter:image:alt' content={description} />
 				</Head>

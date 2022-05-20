@@ -32,6 +32,7 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 	const metadata = {
 		title: meta.title,
 		description: meta.description,
+		image: `/${meta.image.url.substring(2)}`,
 	};
 
 	return (
