@@ -37,7 +37,7 @@ export const Sidebar = () => {
 					>
 						<Dialog.Panel className='relative flex flex-col items-end mt-1 text-gray-200 bg-gray-900 w-80' style={{ overflow: `hidden` }}>
 							<div className='flex flex-col items-end w-full h-full px-3 pt-2 space-y-4'>
-								<div className='flex items-center justify-end w-full mt-2 font-medium text-center text-gray-200'>
+								<div className='flex items-center justify-end w-full mt-2 mb-4 font-medium text-center text-gray-200'>
 									<button
 										onClick={() => setIsOpen(false)}
 										ref={initialFocusRef}
