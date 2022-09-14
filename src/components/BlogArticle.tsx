@@ -9,7 +9,7 @@ export const BlogArticle = ({ meta, code }: { meta: Blog; code: any }) => {
 	const Component = React.useMemo(() => getMDXComponent(code), [code]);
 
 	return (
-		<article className='flex flex-col w-full px-3 pt-10 bg-red-200'>
+		<article className='flex flex-col w-full px-3 pt-10'>
 			<header className='w-full mb-4 space-y-4'>
 				<h1 className='text-3xl font-extrabold tracking-tight text-center text-gray-200'>{meta.title}</h1>
 				<h2 className='text-lg text-center text-gray-400'>{meta.description}</h2>
