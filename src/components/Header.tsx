@@ -1,7 +1,6 @@
 import * as React from 'react';
 import NextLink from 'next/link';
 import { BookOpenIcon, ChatIcon, FolderOpenIcon, MapIcon, MenuAlt2Icon } from '@heroicons/react/outline';
-import { Sidebar } from '@components/Sidebar';
 import { useStore } from '@utils/store';
 
 export const Header = () => {
@@ -27,7 +26,6 @@ export const Header = () => {
 				>
 					<MenuAlt2Icon className='w-6 h-6' />
 				</button>
-				<Sidebar />
 				<div className='hidden sm:block'>
 					{navItems.map(x => (
 						<NextLink href={x.href} key={x.title}>
