@@ -49,21 +49,21 @@ export const navItems = [
 	{
 		title: `Blog`,
 		href: `/blog`,
-		icon: <BookOpenIcon className='w-5 h-5' />,
+		icon: <BookOpenIcon className='w-6 h-6' />,
 	},
 	{
 		title: `Projects`,
 		href: `/projects`,
-		icon: <FolderOpenIcon className='w-5 h-5' />,
+		icon: <FolderOpenIcon className='w-6 h-6' />,
 	},
 	{
 		title: `Travel`,
 		href: `/personal/map`,
-		icon: <MapIcon className='w-5 h-5' />,
+		icon: <MapIcon className='w-6 h-6' />,
 	},
 	{
 		title: `Contact`,
 		href: `/contact`,
-		icon: <ChatIcon className='w-5 h-5' />,
+		icon: <ChatIcon className='w-6 h-6' />,
 	},
 ];

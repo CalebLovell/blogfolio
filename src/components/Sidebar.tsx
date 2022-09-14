@@ -29,33 +29,30 @@ export const Sidebar = () => {
 					<div className='fixed inset-y-0 left-0 flex max-w-full pr-36'>
 						<Transition.Child
 							as={React.Fragment}
-							enter='transform transition ease-in-out duration-500 sm:duration-700'
+							enter='transform transition ease-in-out duration-500'
 							enterFrom='-translate-x-full'
 							enterTo='translate-x-0'
-							leave='transform transition ease-in-out duration-500 sm:duration-700'
+							leave='transform transition ease-in-out duration-500'
 							leaveFrom='translate-x-0'
 							leaveTo='-translate-x-full'
 						>
-							<Dialog.Panel
-								className='relative flex flex-col items-end mt-1 text-gray-200 bg-gray-900 w-80'
-								style={{ overflow: `hidden` }}
-							>
-								<div className='p-2'>
-									<button
-										className='block p-2 font-medium text-center transition duration-150 ease-in-out rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
-										onClick={() => setIsOpen(false)}
-										ref={initialFocusRef}
-									>
-										<span className='sr-only'>Close sidebar nav</span>
-										<XIcon className='w-6 h-6' aria-hidden='true' />
-									</button>
-								</div>
-								<div className='flex flex-col items-end w-full h-full px-3 pt-2 space-y-4 text-right'>
-									{[{ title: `Home`, href: `/`, icon: <HomeIcon className='w-5 h-5' /> }].concat(navItems).map(x => (
+							<Dialog.Panel className='relative flex flex-col items-end mt-1 text-gray-200 bg-gray-900 w-80' style={{ overflow: `hidden` }}>
+								<div className='flex flex-col items-end w-full h-full px-3 pt-2 space-y-4'>
+									<div className='flex items-center justify-end w-full mt-2 font-medium text-center text-gray-200'>
+										<button
+											onClick={() => setIsOpen(false)}
+											ref={initialFocusRef}
+											className='p-2 transition duration-150 ease-in-out rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+										>
+											<span className='sr-only'>Close sidebar nav</span>
+											<XIcon className='w-6 h-6' aria-hidden='true' />
+										</button>
+									</div>
+									{[{ title: `Home`, href: `/`, icon: <HomeIcon className='w-6 h-6' /> }].concat(navItems).map(x => (
 										<NextLink href={x.href} key={x.title}>
 											<a
 												href={x.href}
-												className='flex items-center justify-between w-full p-2 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md sm:mx-2 lg:px-4 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+												className='flex items-center justify-between w-full p-2 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
 												onClick={() => setIsOpen(false)}
 											>
 												{x.title}
