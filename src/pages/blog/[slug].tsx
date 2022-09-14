@@ -37,52 +37,50 @@ export default function PostPage({ meta, code }: { meta: Blog; code: any }) {
 
 	return (
 		<PageWrapper metadata={metadata}>
-			<div className='flex justify-center'>
-				<article className='flex flex-col items-center max-w-4xl p-4 py-8 mx-3 my-2 bg-gray-800 rounded-md'>
-					<header className='w-full mb-4 space-y-4'>
-						<h1 className='text-3xl font-extrabold tracking-tight text-center text-gray-200 sm:text-4xl'>{meta.title}</h1>
-						<h2 className='text-lg text-center text-gray-400'>{meta.description}</h2>
-						<div className='flex flex-col w-full'>
-							<div className='overflow-hidden rounded-md text-[0px]'>
-								<Image
-									src={`/${meta.image.url.substring(2)}`}
-									width={1920}
-									height={960}
-									alt={meta.image.alt}
-									placeholder='blur'
-									blurDataURL={`/${meta.image.url.substring(2)}`}
-								/>
-							</div>
+			<article className='flex flex-col items-center mx-3 mt-10 lg:mx-6'>
+				<header className='w-full mb-4 space-y-4'>
+					<h1 className='text-3xl font-extrabold tracking-tight text-center text-gray-200 sm:text-4xl'>{meta.title}</h1>
+					<h2 className='text-lg text-center text-gray-400'>{meta.description}</h2>
+					<div className='flex flex-col w-full'>
+						<div className='overflow-hidden rounded-md text-[0px]'>
+							<Image
+								src={`/${meta.image.url.substring(2)}`}
+								width={1920}
+								height={960}
+								alt={meta.image.alt}
+								placeholder='blur'
+								blurDataURL={`/${meta.image.url.substring(2)}`}
+							/>
 						</div>
-					</header>
-					<main className='w-full text-gray-200'>
-						<Component components={MdxComponents} />
-					</main>
+					</div>
+				</header>
+				<main className='w-full text-gray-200'>
+					<Component components={MdxComponents} />
+				</main>
 
-					<footer className='flex flex-row items-center justify-between w-full text-sm'>
-						<div className='flex'>
-							<div className='flex items-center justify-center flex-shrink-0'>
-								<span className='sr-only'>Caleb Lovell</span>
-								<Image className='object-cover rounded-full' height={40} width={40} src='/profile.jpg' alt='profile' />
-							</div>
-							<div className='ml-3'>
-								<p className='text-sm font-medium text-gray-400'>Caleb Lovell</p>
-								<div className='flex space-x-1 text-sm text-gray-500'>
-									<time dateTime={meta.publishedAt}>{meta.publishedAt}</time>
-								</div>
+				<footer className='flex flex-row items-center justify-between w-full text-sm'>
+					<div className='flex'>
+						<div className='flex items-center justify-center flex-shrink-0'>
+							<span className='sr-only'>Caleb Lovell</span>
+							<Image className='object-cover rounded-full' height={40} width={40} src='/profile.jpg' alt='profile' />
+						</div>
+						<div className='ml-3'>
+							<p className='text-sm font-medium text-gray-400'>Caleb Lovell</p>
+							<div className='flex space-x-1 text-sm text-gray-500'>
+								<time dateTime={meta.publishedAt}>{meta.publishedAt}</time>
 							</div>
 						</div>
-						<a
-							href={`https://github.com/CalebLovell/website/blob/main/posts/${meta.slug}.mdx`}
-							target='_blank'
-							rel='noreferrer'
-							className='flex text-center justify-center items-center px-2 md:px-4 py-1.5 text-sm font-medium text-gray-200 transition duration-150 ease-in-out bg-red-600 border-2 border-red-600 rounded-md lg:text-base hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
-						>
-							View Source Code
-						</a>
-					</footer>
-				</article>
-			</div>
+					</div>
+					<a
+						href={`https://github.com/CalebLovell/website/blob/main/posts/${meta.slug}.mdx`}
+						target='_blank'
+						rel='noreferrer'
+						className='flex text-center justify-center items-center px-2 md:px-4 py-1.5 text-sm font-medium text-gray-200 transition duration-150 ease-in-out bg-red-600 border-2 border-red-600 rounded-md lg:text-base hover:bg-red-700 hover:border-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
+					>
+						View Source
+					</a>
+				</footer>
+			</article>
 		</PageWrapper>
 	);
 }

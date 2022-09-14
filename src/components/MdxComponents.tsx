@@ -7,7 +7,7 @@ export const MdxComponents = {
 	h2: (props: any) => <h2 className='mt-4 mb-3 text-2xl font-bold' {...props} />,
 	h3: (props: any) => <h3 className='mt-4 mb-5 text-xl font-bold' {...props} />,
 	h4: (props: any) => <h4 className='mt-6 mb-5 text-lg font-bold' {...props} />,
-	p: (props: any) => <p className='mb-5 leading-7' {...props} />,
+	p: (props: any) => <p className='mb-5 leading-7 lg:text-lg' {...props} />,
 	a: ({ href = ``, ...props }) => {
 		if (href.startsWith(`http`)) {
 			return (
@@ -23,7 +23,7 @@ export const MdxComponents = {
 	},
 	ul: (props: any) => <ul className='pl-4 my-4 leading-7 list-disc md:pl-10' {...props} />,
 	ol: (props: any) => <ol className='pl-4 my-4 leading-7 list-decimal md:pl-10' {...props} />,
-	li: (props: any) => <li className='relative pl-2 my-3 sm:pl-7' {...props} />,
+	li: (props: any) => <li className='relative pl-2 my-3 lg:text-lg sm:pl-7' {...props} />,
 	strong: (props: any) => <strong className='font-semibold' {...props} />,
 	Image: ({ children, ...props }: { children: React.ReactNode }) => (
 		<figure className='my-5'>
