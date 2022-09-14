@@ -13,7 +13,7 @@
 		"clean": "yarn pretty && yarn linty && yarn ts"
 	},
 	"dependencies": {
-		"@headlessui/react": "^1.6.6",
+		"@headlessui/react": "^1.7.1",
 		"@heroicons/react": "^1.0.4",
 		"@icons-pack/react-simple-icons": "^4.6.1",
 		"@sentry/nextjs": "^6.19.6",
