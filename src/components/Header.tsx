@@ -1,7 +1,7 @@
 import * as React from 'react';
 import NextLink from 'next/link';
-import { MenuAlt2Icon } from '@heroicons/react/solid';
-import { Sidebar } from './Sidebar';
+import { BookOpenIcon, ChatIcon, FolderOpenIcon, MapIcon, MenuAlt2Icon } from '@heroicons/react/outline';
+import { Sidebar } from '@components/Sidebar';
 import { useStore } from '@utils/store';
 
 export const Header = () => {
@@ -49,17 +49,21 @@ export const navItems = [
 	{
 		title: `Blog`,
 		href: `/blog`,
+		icon: <BookOpenIcon className='w-5 h-5' />,
 	},
 	{
 		title: `Projects`,
 		href: `/projects`,
+		icon: <FolderOpenIcon className='w-5 h-5' />,
 	},
 	{
 		title: `Travel`,
 		href: `/personal/map`,
+		icon: <MapIcon className='w-5 h-5' />,
 	},
 	{
 		title: `Contact`,
 		href: `/contact`,
+		icon: <ChatIcon className='w-5 h-5' />,
 	},
 ];

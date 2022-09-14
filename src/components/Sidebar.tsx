@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { XIcon } from '@heroicons/react/outline';
+import { XIcon, HomeIcon } from '@heroicons/react/outline';
 import { useStore } from '@utils/store';
-import { navItems } from './Header';
+import { navItems } from '@components/Header';
 import NextLink from 'next/link';
 
 export const Sidebar = () => {
@@ -37,7 +37,7 @@ export const Sidebar = () => {
 							leaveTo='-translate-x-full'
 						>
 							<Dialog.Panel
-								className='relative flex flex-col items-end w-screen max-w-xs mt-1 text-gray-200 bg-gray-900'
+								className='relative flex flex-col items-end mt-1 text-gray-200 bg-gray-900 w-80'
 								style={{ overflow: `hidden` }}
 							>
 								<div className='p-2'>
@@ -51,14 +51,15 @@ export const Sidebar = () => {
 									</button>
 								</div>
 								<div className='flex flex-col items-end w-full h-full px-3 pt-2 space-y-4 text-right'>
-									{[{ title: `Home`, href: `/` }].concat(navItems).map(x => (
+									{[{ title: `Home`, href: `/`, icon: <HomeIcon className='w-5 h-5' /> }].concat(navItems).map(x => (
 										<NextLink href={x.href} key={x.title}>
 											<a
 												href={x.href}
-												className='p-2 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md sm:mx-2 lg:px-4 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+												className='flex items-center justify-between w-full p-2 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md sm:mx-2 lg:px-4 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
 												onClick={() => setIsOpen(false)}
 											>
 												{x.title}
+												{x.icon}
 											</a>
 										</NextLink>
 									))}
