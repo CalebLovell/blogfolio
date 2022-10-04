@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import NextImage from 'next/image';
 import { MdxComponents } from '@components/MdxComponents';
 import { getMDXComponent } from 'mdx-bundler/client';
 import * as React from 'react';
@@ -13,12 +13,11 @@ export const BlogArticle = ({ meta, code }: { meta: Blog; code: any }) => {
 			<header className='w-full mb-4 space-y-4'>
 				<h1 className='text-3xl font-extrabold tracking-tight text-center text-gray-200'>{meta.title}</h1>
 				<h2 className='text-lg text-center text-gray-400'>{meta.description}</h2>
-				<div className='flex flex-col w-full'>
-					<div className='overflow-hidden rounded-md text-[0px]'>
-						<Image
+				<div className='flex flex-col items-center w-full py-4'>
+					<div className='overflow-hidden rounded-md text-[0px]' style={{ width: `600px`, height: `300px`, position: `relative` }}>
+						<NextImage
 							src={`/${meta.image.url.substring(2)}`}
-							width={1920}
-							height={960}
+							layout='fill'
 							alt={meta.image.alt}
 							placeholder='blur'
 							blurDataURL={`/${meta.image.url.substring(2)}`}
@@ -35,7 +34,7 @@ export const BlogArticle = ({ meta, code }: { meta: Blog; code: any }) => {
 				<div className='flex'>
 					<div className='flex items-center justify-center flex-shrink-0'>
 						<span className='sr-only'>Caleb Lovell</span>
-						<Image className='object-cover rounded-full' height={40} width={40} src='/profile.jpg' alt='profile' />
+						<NextImage className='object-cover rounded-full' height={40} width={40} src='/profile.jpg' alt='profile' />
 					</div>
 					<div className='ml-3'>
 						<p className='text-sm font-medium text-gray-400'>Caleb Lovell</p>

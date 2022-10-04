@@ -25,15 +25,16 @@ export const MdxComponents = {
 	ol: (props: any) => <ol className='pl-4 my-4 leading-7 list-decimal md:pl-10' {...props} />,
 	li: (props: any) => <li className='relative pl-2 my-3 lg:text-lg sm:pl-7' {...props} />,
 	strong: (props: any) => <strong className='font-semibold' {...props} />,
-	Image: ({ children, ...props }: { children: React.ReactNode }) => (
-		<figure className='my-5'>
-			<NextImage {...(props as any)} />
-			{children && <figcaption className='mt-2 text-sm text-gray-500'>{children}</figcaption>}
-		</figure>
-	),
+	NextImage: ({ ...props }: { children: React.ReactNode }) => {
+		return (
+			<div className='my-5'>
+				<NextImage className='rounded-md' {...(props as any)} />
+			</div>
+		);
+	},
 	img: ({ ...props }: { children: React.ReactNode }) => (
 		<div className='my-5'>
-			<NextImage {...(props as any)} />
+			<NextImage className='rounded-md' layout='fill' {...(props as any)} />
 		</div>
 	),
 	blockquote: (props: any) => <blockquote className='pl-8 my-4 italic font-medium border-l-2 border-gray-200' {...props} />,
