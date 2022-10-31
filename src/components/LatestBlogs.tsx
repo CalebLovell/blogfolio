@@ -1,5 +1,5 @@
-import { Blog } from 'pages/blog';
 import { BookOpenIcon } from '@heroicons/react/solid';
+import { Blog } from 'pages/blog';
 
 export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 	return (

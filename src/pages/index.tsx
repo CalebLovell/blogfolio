@@ -1,9 +1,9 @@
-import { LatestBlogs } from '@components/LatestBlogs';
 import { HeroSection } from '@components/HeroSection';
+import { LatestBlogs } from '@components/LatestBlogs';
 import { PageWrapper } from '@components/PageWrapper';
 import { ProfileCard } from '@components/ProfileCard';
-import { getAllPostsMeta } from '@utils/mdx';
 import { TechList } from '@components/TechList';
+import { getAllPostsMeta } from '@utils/mdx';
 
 export default function Home({ blogs }) {
 	return (

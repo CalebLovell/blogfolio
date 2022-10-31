@@ -1,7 +1,7 @@
-import * as React from 'react';
-import NextLink from 'next/link';
 import { BookOpenIcon, ChatIcon, FolderOpenIcon, MapIcon, MenuAlt2Icon } from '@heroicons/react/outline';
 import { useStore } from '@utils/store';
+import NextLink from 'next/link';
+import * as React from 'react';
 
 export const Header = () => {
 	const isOpen = useStore(state => state.sidebarIsOpen);

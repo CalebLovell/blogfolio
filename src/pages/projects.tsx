@@ -2,8 +2,7 @@ import { HeroSection } from '@components/HeroSection';
 import { PageWrapper } from '@components/PageWrapper';
 import { ProjectCard } from '@components/ProjectCard';
 import { ProjectDivider } from '@components/ProjectDivider';
-
-import { Nextdotjs, Tailwindcss, Typescript, ReactJs, Firebase, DThreeDotjs } from '@icons-pack/react-simple-icons';
+import { DThreeDotjs, Firebase, Nextdotjs, ReactJs, Tailwindcss, Typescript } from '@icons-pack/react-simple-icons';
 import { Fragment } from 'react';
 
 export interface Project {

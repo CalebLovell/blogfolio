@@ -1,5 +1,5 @@
-import { Blog } from 'pages/blog';
 import Image from 'next/image';
+import { Blog } from 'pages/blog';
 
 export const BlogPreview = ({ post }: { post: Blog }) => {
 	return (

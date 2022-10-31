@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { PageWrapper } from '@components/PageWrapper';
-import { useForm } from 'react-hook-form';
-import { RadioGroup } from '@headlessui/react';
 import { HeroSection } from '@components/HeroSection';
-import { useSendEmail } from 'api/sendEmail';
 import { LoadingSpinner } from '@components/LoadingSpinner';
+import { PageWrapper } from '@components/PageWrapper';
+import { RadioGroup } from '@headlessui/react';
+import { useSendEmail } from 'api/sendEmail';
+import * as React from 'react';
+import { useForm } from 'react-hook-form';
 
 const chatPrompts = [
 	{ id: 3, message: `Tell me about the project you're working on` },

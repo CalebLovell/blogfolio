@@ -1,8 +1,9 @@
 import { Footer } from '@components/Footer';
-import Head from 'next/head';
 import { Header } from '@components/Header';
-import PlausibleProvider from 'next-plausible';
+import Head from 'next/head';
 import { useRouter } from 'next/router';
+import PlausibleProvider from 'next-plausible';
+
 import { Sidebar } from './Sidebar';
 
 interface Props {

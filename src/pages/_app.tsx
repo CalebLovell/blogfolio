@@ -1,9 +1,10 @@
 import '../styles/globals.css';
+
+import { Toast } from '@components/Toast';
+import { ToastContainer } from '@components/ToastContainer';
 import type { AppProps } from 'next/app';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ToastProvider } from 'react-toast-notifications';
-import { Toast } from '@components/Toast';
-import { ToastContainer } from '@components/ToastContainer';
 
 const queryClient = new QueryClient({
 	defaultOptions: {

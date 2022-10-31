@@ -1,8 +1,8 @@
+import { BlogArticle } from '@components/BlogArticle';
+import { PageWrapper } from '@components/PageWrapper';
 import { getAllPostsMeta, getPostBySlug } from '@utils/mdx';
 import { GetStaticProps } from 'next';
-import { PageWrapper } from '@components/PageWrapper';
 import { Blog } from 'pages/blog';
-import { BlogArticle } from '@components/BlogArticle';
 
 export const getStaticPaths = () => {
 	const posts = getAllPostsMeta();

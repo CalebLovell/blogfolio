@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { MailOptions } from 'nodemailer-mailgun-transport';
 import { Transporter } from 'nodemailer';
+import { MailOptions } from 'nodemailer-mailgun-transport';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 	try {

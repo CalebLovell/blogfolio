@@ -1,7 +1,6 @@
-import { CheckCircleIcon, ExclamationIcon, InformationCircleIcon, XCircleIcon, XIcon } from '@heroicons/react/solid';
-
-import { ToastProps } from 'react-toast-notifications';
 import { Transition } from '@headlessui/react';
+import { CheckCircleIcon, ExclamationIcon, InformationCircleIcon, XCircleIcon, XIcon } from '@heroicons/react/solid';
+import { ToastProps } from 'react-toast-notifications';
 
 export const Toast: React.FC<ToastProps> = ({ appearance, onDismiss, children }) => {
 	return (

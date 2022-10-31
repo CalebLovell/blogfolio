@@ -6,6 +6,7 @@ module.exports = {
 		`plugin:promise/recommended`,
 		`plugin:@typescript-eslint/recommended`,
 	],
+	plugins: [`simple-import-sort`],
 	parser: `@typescript-eslint/parser`,
 	parserOptions: {
 		ecmaVersion: 2020,
@@ -25,6 +26,7 @@ module.exports = {
 		React: `writable`,
 	},
 	rules: {
+		'simple-import-sort/imports': 2,
 		'jsx-a11y/heading-has-content': `off`,
 		'jsx-a11y/anchor-has-content': `off`,
 		'@typescript-eslint/explicit-module-boundary-types': `off`,

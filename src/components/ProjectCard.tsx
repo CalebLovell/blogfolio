@@ -1,5 +1,5 @@
-import { Project } from 'pages/projects';
 import Image from 'next/image';
+import { Project } from 'pages/projects';
 
 export const ProjectCard = ({ project }: { project: Project }) => {
 	return (

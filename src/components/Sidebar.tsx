@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Dialog, Transition } from '@headlessui/react';
-import { XIcon, HomeIcon } from '@heroicons/react/outline';
-import { useStore } from '@utils/store';
 import { navItems } from '@components/Header';
+import { Dialog, Transition } from '@headlessui/react';
+import { HomeIcon, XIcon } from '@heroicons/react/outline';
+import { useStore } from '@utils/store';
 import NextLink from 'next/link';
+import * as React from 'react';
 
 export const Sidebar = () => {
 	const isOpen = useStore(state => state.sidebarIsOpen);

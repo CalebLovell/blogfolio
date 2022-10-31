@@ -1,8 +1,8 @@
-import NextImage from 'next/image';
 import { MdxComponents } from '@components/MdxComponents';
 import { getMDXComponent } from 'mdx-bundler/client';
-import * as React from 'react';
+import NextImage from 'next/image';
 import { Blog } from 'pages/blog';
+import * as React from 'react';
 
 export const BlogArticle = ({ meta, code }: { meta: Blog; code: any }) => {
 	// This is a bit weird, but this is how mdx-bundler recommends it.
