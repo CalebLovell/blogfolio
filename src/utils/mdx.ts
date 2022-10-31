@@ -1,5 +1,5 @@
 import fs from 'fs';
-import glob from 'glob';
+import { sync } from 'glob';
 import matter from 'gray-matter';
 import { bundleMDX } from 'mdx-bundler';
 import { Blog } from 'pages/blog';
@@ -12,7 +12,7 @@ export const getAllPostsMeta = () => {
 	const PATH = path.join(POSTS_PATH);
 
 	// Get all file paths in the posts folder (that end with .mdx)
-	const paths = glob.sync(`${PATH}/**/*.mdx`);
+	const paths = sync(`${PATH}/**/*.mdx`);
 
 	return (
 		paths
