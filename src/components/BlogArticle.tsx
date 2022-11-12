@@ -10,7 +10,7 @@ export const BlogArticle = ({ meta, code }: { meta: Blog; code: any }) => {
 
 	return (
 		<article className='flex flex-col items-center w-full px-3 pt-10 lg:px-6'>
-			<header className='w-full mb-4 space-y-4'>
+			<header className='w-full mb-4 max-w-3xl space-y-4'>
 				<h1 className='text-3xl font-extrabold tracking-tight text-center text-gray-200'>{meta.title}</h1>
 				<h2 className='text-lg text-center text-gray-400'>{meta.description}</h2>
 				<div className='flex flex-col items-center w-full py-4'>
