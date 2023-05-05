@@ -1,9 +1,14 @@
 import { HeroSection } from '@components/HeroSection';
 import { PageWrapper } from '@components/PageWrapper';
 
-export default function Map({}) {
+const metadata = {
+	title: `Travel Map`,
+	description: `View some of the places I have lived and visited around the world.`,
+};
+
+export default function Map() {
 	return (
-		<PageWrapper>
+		<PageWrapper metadata={metadata}>
 			<div className='px-3 md:px-5' style={{ height: `100%` }}>
 				<HeroSection title='Travel Map' subtitle='Map of the places I have lived and visited around the world' />
 			</div>

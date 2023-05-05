@@ -1,4 +1,4 @@
-import { BookOpenIcon, ChatIcon, FolderOpenIcon, MapIcon, MenuAlt2Icon } from '@heroicons/react/outline';
+import { BookOpenIcon, ChatIcon, FolderOpenIcon, MapIcon, MenuAlt2Icon, MusicNoteIcon } from '@heroicons/react/outline';
 import { useStore } from '@utils/store';
 import NextLink from 'next/link';
 import * as React from 'react';
@@ -58,6 +58,11 @@ export const navItems = [
 		title: `Travel`,
 		href: `/personal/map`,
 		icon: <MapIcon className='w-6 h-6' />,
+	},
+	{
+		title: `Music`,
+		href: `/personal/music`,
+		icon: <MusicNoteIcon className='w-6 h-6' />,
 	},
 	{
 		title: `Contact`,
