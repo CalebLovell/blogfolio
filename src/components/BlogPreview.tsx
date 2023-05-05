@@ -4,7 +4,7 @@ import { Blog } from 'pages/blog';
 export const BlogPreview = ({ post }: { post: Blog }) => {
 	return (
 		<a
-			className='transition duration-150 ease-in-out rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-4 focus:ring-offset-gray-800'
+			className='transition duration-150 ease-in-out rounded-md hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-4 focus:ring-offset-gray-800'
 			href={`blog/${post.slug}`}
 		>
 			<article key={post.title} className='flex flex-col h-full overflow-hidden rounded-md'>

@@ -61,7 +61,7 @@ export const Footer = () => {
 						<a
 							key={x.title}
 							href={x.href}
-							className='p-2 text-gray-200 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+							className='p-2 text-gray-200 rounded-md transition duration-500 ease-in-out hover:rotate-12 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
 							target='_blank'
 							rel='noreferrer'
 						>

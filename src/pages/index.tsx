@@ -34,7 +34,7 @@ export const getStaticProps = () => {
 	const sortedBlogs = blogs.sort((a, b) => b.index - a.index);
 	return {
 		props: {
-			blogs: sortedBlogs.slice(0, 3),
+			blogs: sortedBlogs.slice(0, 5),
 		},
 	};
 };

@@ -9,7 +9,7 @@ export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 				{blogs.map((blog, index) => (
 					<li
 						key={blog.slug}
-						className={`p-4 bg-gray-800 hover:bg-gray-700 focus-within:ring-2 focus-within:ring-inset focus-within:ring-red-600 ${
+						className={`p-4 bg-gray-800 transition duration-75 ease-in-out hover:bg-gray-700 focus-within:ring-2 focus-within:ring-inset focus-within:ring-red-600 ${
 							index === 0 ? `rounded-t-md` : index === blogs.length - 1 ? `rounded-b-md` : ``
 						}`}
 					>
