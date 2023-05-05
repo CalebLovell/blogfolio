@@ -1,5 +1,6 @@
 import { HeroSection } from '@components/HeroSection';
 import { LatestBlogs } from '@components/LatestBlogs';
+import { MobilePagesSection } from '@components/MobilePagesSection';
 import { PageWrapper } from '@components/PageWrapper';
 import { ProfileCard } from '@components/ProfileCard';
 import { TechList } from '@components/TechList';
@@ -16,13 +17,10 @@ export default function Home({ blogs }) {
 					title="Hey there! I'm Caleb Lovell"
 					subtitle='As a developer, I love building beautiful, accessible apps. In my freetime, you can find me reading, learning languages, traveling or hiking in the mountains!'
 				/>
-				<section className='flex flex-col items-center'>
-					<div className='w-full'>
-						<LatestBlogs blogs={blogs} />
-					</div>
-					<div className='w-full'>
-						<TechList />
-					</div>
+				<section className='flex flex-col items-center space-y-6'>
+					<MobilePagesSection />
+					<LatestBlogs blogs={blogs} />
+					<TechList />
 				</section>
 			</div>
 		</PageWrapper>

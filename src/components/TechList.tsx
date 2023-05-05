@@ -62,7 +62,7 @@ const backend = [
 
 export const TechList = () => {
 	return (
-		<>
+		<div className='w-full space-y-6'>
 			<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Frontend Tech Stack</h3>
 			<ul className='grid grid-cols-2 text-red-400 sm:grid-cols-4 md:grid-cols-5 gap-x-4 gap-y-4'>
 				{frontend.map(x => (
@@ -84,6 +84,6 @@ export const TechList = () => {
 					</div>
 				))}
 			</ul>
-		</>
+		</div>
 	);
 };

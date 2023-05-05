@@ -3,8 +3,8 @@ import { Blog } from 'pages/blog';
 
 export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 	return (
-		<>
-			<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Latest Posts</h3>
+		<div className='w-full'>
+			<h3 className='my-4 text-2xl font-semibold tracking-tight text-gray-200'>Latest Blog Posts</h3>
 			<ul className='w-full divide-y divide-gray-700 rounded-md'>
 				{blogs.map((blog, index) => (
 					<li
@@ -39,6 +39,6 @@ export const LatestBlogs = ({ blogs }: { blogs: Blog[] }) => {
 					</li>
 				))}
 			</ul>
-		</>
+		</div>
 	);
 };
