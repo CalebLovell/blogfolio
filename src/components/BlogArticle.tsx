@@ -9,7 +9,7 @@ export const BlogArticle = ({ meta, code }: { meta: Blog; code: any }) => {
 	const Component = React.useMemo(() => getMDXComponent(code), [code]);
 
 	return (
-		<article className='flex flex-col items-center w-full px-3 pt-10 lg:px-6'>
+		<article className='flex flex-col items-center w-full px-3 pt-10 rounded-md lg:px-6 lg:mb-20'>
 			<header className='w-full mb-4 max-w-3xl space-y-4'>
 				<h1 className='text-3xl font-extrabold tracking-tight text-center text-gray-200'>{meta.title}</h1>
 				<h2 className='text-lg text-center text-gray-400'>{meta.description}</h2>
@@ -31,7 +31,7 @@ export const BlogArticle = ({ meta, code }: { meta: Blog; code: any }) => {
 				<Component components={MdxComponents} />
 			</main>
 
-			<footer className='flex flex-row items-center justify-between w-full text-sm'>
+			<footer className='flex max-w-3xl flex-row items-center justify-between w-full text-sm'>
 				<div className='flex'>
 					<div className='flex items-center justify-center flex-shrink-0'>
 						<span className='sr-only'>Caleb Lovell</span>
