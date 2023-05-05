@@ -51,7 +51,7 @@ export const Sidebar = () => {
 									<NextLink href={x.href} key={x.title}>
 										<a
 											href={x.href}
-											className='flex items-center justify-between w-full p-2 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+											className='flex items-center justify-between w-full p-2 font-medium bg-gray-800 text-center text-gray-200 transition duration-150 ease-in-out rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
 											onClick={() => setIsOpen(false)}
 										>
 											{x.title}
