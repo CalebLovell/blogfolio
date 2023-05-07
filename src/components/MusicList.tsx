@@ -1,4 +1,4 @@
-import { Youtube } from '@icons-pack/react-simple-icons';
+import { SiYoutube } from '@icons-pack/react-simple-icons';
 import { MusicListType } from '@utils/music';
 
 type Props = {
@@ -16,7 +16,7 @@ export const MusicList = ({ list }: Props) => {
 			>
 				<h3 className='text-2xl font-semibold tracking-tight text-gray-200'>{list.genre}</h3>
 				<div className='flex justify-center items-center p-2 rounded-md group-hover:bg-gray-900 bg-gray-700'>
-					<Youtube size={26} className='text-red-400 group-hover:text-red-600' />
+					<SiYoutube fr={12} size={26} className='text-red-400 group-hover:text-red-600' />
 				</div>
 			</a>
 			<ul className='text-sm text-gray-400 divide-y border-t border-gray-700 divide-gray-700'>
@@ -47,7 +47,7 @@ export const MusicList = ({ list }: Props) => {
 									<p className='mt-1 text-xs leading-5 text-gray-400'>{song.time}</p>
 								</div>
 								<div className='flex justify-center items-center p-2 rounded-md group-hover:bg-gray-900 bg-gray-700'>
-									<Youtube size={26} className='text-red-400 group-hover:text-red-600' />
+									<SiYoutube fr={12} size={26} className='text-red-400 group-hover:text-red-600' />
 								</div>
 							</div>
 						</a>

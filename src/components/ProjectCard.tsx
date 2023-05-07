@@ -24,8 +24,8 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 				<Image
 					className='rounded-md'
 					src={project.image.url}
-					width={1094}
-					height={684}
+					width={project.image.width}
+					height={project.image.height}
 					alt={project.image.alt}
 					placeholder='blur'
 					blurDataURL={project.image.url}
