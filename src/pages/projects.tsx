@@ -26,11 +26,11 @@ export interface Project {
 
 const projects: Project[] = [
 	{
-		title: `Latin American Political History Map`,
-		description: `A visual timeline of the political history of Latin America.`,
+		title: `LATAM Political History Map`,
+		description: `A visual and interactive timeline of the political history of Latin America.`,
 		image: { url: `/mapa-politico.png`, alt: `A screenshot of the map set to January 1st, 2023`, width: 1200, height: 630 },
-		websiteUrl: `https://mapa-politico.fly.dev/`,
-		githubUrl: `https://github.com/CalebLovell/mapa-politico`,
+		websiteUrl: `https://www.latamap.com/`,
+		githubUrl: `https://github.com/CalebLovell/latamap`,
 		tech: [
 			{ title: `D3.js`, icon: <SiD3dotjs fr={12} /> },
 			{ title: `Remix Run`, icon: <SiRemix fr={12} /> },
@@ -60,7 +60,7 @@ const projects: Project[] = [
 		title: `Caleb Lovell's Blogfolio`,
 		description: `My personal website is what you are viewing right now! It's a blog, portfolio, contact form, and space for me to experiment with stuff.`,
 		image: { url: `/blogfolio.png`, alt: `the website's home page`, width: 1094, height: 684 },
-		websiteUrl: `https://www.caleblovell.dev/`,
+		websiteUrl: `https://www.caleblovell.com/`,
 		githubUrl: `https://github.com/CalebLovell/personal-site`,
 		tech: [
 			{ title: `Next.js`, icon: <SiNextdotjs fr={12} /> },
