@@ -26,7 +26,7 @@ export interface Project {
 
 const projects: Project[] = [
 	{
-		title: `LATAM Political History Map`,
+		title: `Latin American Political History Map`,
 		description: `A visual and interactive timeline of the political history of Latin America.`,
 		image: { url: `/mapa-politico.png`, alt: `A screenshot of the map set to January 1st, 2023`, width: 1200, height: 630 },
 		websiteUrl: `https://www.latamap.com/`,
