@@ -1,5 +1,5 @@
-import { navItems } from '@components/Header';
 import { Dialog, Transition } from '@headlessui/react';
+import { BookOpenIcon, ChatIcon, FolderOpenIcon, MapIcon, MusicNoteIcon } from '@heroicons/react/outline';
 import { HomeIcon, XIcon } from '@heroicons/react/outline';
 import { useStore } from '@utils/store';
 import NextLink from 'next/link';
@@ -47,7 +47,7 @@ export const Sidebar = () => {
 										<XIcon className='w-6 h-6' aria-hidden='true' />
 									</button>
 								</div>
-								{[{ title: `Home`, href: `/`, icon: <HomeIcon className='w-6 h-6' /> }].concat(navItems).map(x => (
+								{mobileNavItems.map(x => (
 									<NextLink href={x.href} key={x.title}>
 										<a
 											href={x.href}
@@ -67,3 +67,36 @@ export const Sidebar = () => {
 		</Transition.Root>
 	);
 };
+
+export const mobileNavItems = [
+	{
+		title: `Home`,
+		href: `/`,
+		icon: <HomeIcon className='w-6 h-6' />,
+	},
+	{
+		title: `Blog`,
+		href: `/blog`,
+		icon: <BookOpenIcon className='w-6 h-6' />,
+	},
+	{
+		title: `Projects`,
+		href: `/projects`,
+		icon: <FolderOpenIcon className='w-6 h-6' />,
+	},
+	{
+		title: `Travel`,
+		href: `/personal/map`,
+		icon: <MapIcon className='w-6 h-6' />,
+	},
+	{
+		title: `Music`,
+		href: `/personal/music`,
+		icon: <MusicNoteIcon className='w-6 h-6' />,
+	},
+	{
+		title: `Contact`,
+		href: `/contact`,
+		icon: <ChatIcon className='w-6 h-6' />,
+	},
+];

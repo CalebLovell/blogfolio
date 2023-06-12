@@ -28,7 +28,7 @@ const projects: Project[] = [
 	{
 		title: `Latin American Political History Map`,
 		description: `A visual and interactive timeline of the political history of Latin America.`,
-		image: { url: `/mapa-politico.png`, alt: `A screenshot of the map set to January 1st, 2023`, width: 1200, height: 630 },
+		image: { url: `/latamap.png`, alt: `A screenshot of the map set to January 1st, 2023`, width: 1200, height: 630 },
 		websiteUrl: `https://www.latamap.com/`,
 		githubUrl: `https://github.com/CalebLovell/latamap`,
 		tech: [

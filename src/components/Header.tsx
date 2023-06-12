@@ -1,3 +1,4 @@
+import { Dropdown } from '@components/Dropdown';
 import { BookOpenIcon, ChatIcon, FolderOpenIcon, MapIcon, MenuAlt2Icon, MusicNoteIcon } from '@heroicons/react/outline';
 import { useStore } from '@utils/store';
 import NextLink from 'next/link';
@@ -26,45 +27,70 @@ export const Header = () => {
 				>
 					<MenuAlt2Icon className='w-6 h-6' />
 				</button>
-				<div className='hidden sm:block'>
-					{navItems.map(x => (
-						<NextLink href={x.href} key={x.title}>
-							<a
-								href={x.href}
-								className='p-2 mx-1 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md sm:mx-2 lg:px-4 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
-							>
-								{x.title}
-							</a>
-						</NextLink>
-					))}
+
+				<div className='hidden sm:flex'>
+					{desktopNavItems.map(x =>
+						x.type === `link` ? (
+							<NextLink href={x.href} key={x.title}>
+								<a
+									href={x.href}
+									className='p-2 mx-1 font-medium text-center text-gray-200 transition duration-150 ease-in-out rounded-md sm:mx-2 lg:px-4 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+								>
+									{x.title}
+								</a>
+							</NextLink>
+						) : x.type === `dropdown` ? (
+							<Dropdown title={x.title} links={x.links} key={x.title} />
+						) : null
+					)}
 				</div>
 			</nav>
 		</header>
 	);
 };
 
-export const navItems = [
+type LinkItem = {
+	type: `link`;
+	title: string;
+	href: string;
+	icon: React.ReactNode;
+};
+
+type DropdownItem = {
+	type: `dropdown`;
+	title: string;
+	links: {
+		name: string;
+		href: string;
+		icon: React.ReactNode;
+	}[];
+};
+
+type NavItems = Array<LinkItem | DropdownItem>;
+
+export const desktopNavItems: NavItems = [
 	{
+		type: `link`,
 		title: `Blog`,
 		href: `/blog`,
 		icon: <BookOpenIcon className='w-6 h-6' />,
 	},
 	{
+		type: `link`,
 		title: `Projects`,
 		href: `/projects`,
 		icon: <FolderOpenIcon className='w-6 h-6' />,
 	},
 	{
-		title: `Travel`,
-		href: `/personal/map`,
-		icon: <MapIcon className='w-6 h-6' />,
+		type: `dropdown`,
+		title: `Personal`,
+		links: [
+			{ name: `Travel`, href: `/personal/map`, icon: <MapIcon className='w-6 h-6' /> },
+			{ name: `Music`, href: `/personal/music`, icon: <MusicNoteIcon className='w-6 h-6' /> },
+		],
 	},
 	{
-		title: `Music`,
-		href: `/personal/music`,
-		icon: <MusicNoteIcon className='w-6 h-6' />,
-	},
-	{
+		type: `link`,
 		title: `Contact`,
 		href: `/contact`,
 		icon: <ChatIcon className='w-6 h-6' />,
