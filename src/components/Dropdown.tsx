@@ -16,7 +16,7 @@ export const Dropdown = ({ title, links }: Props) => {
 		<Popover className='relative'>
 			{({ open }) => (
 				<>
-					<Popover.Button className='inline-flex items-center p-2 ml-2 text-base font-medium rounded-md text-gray-200 group hover:bg-red-600'>
+					<Popover.Button className='inline-flex items-center p-2 ml-2 text-base font-medium rounded-md text-gray-200 group hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'>
 						<span>{title}</span>
 						<ChevronDownIcon className='w-5 h-5 ml-2 text-gray-200' aria-hidden='true' />
 					</Popover.Button>
