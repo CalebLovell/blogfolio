@@ -50,7 +50,7 @@ const projects: Project[] = [
 		tech: [
 			{ title: `Next.js`, icon: <SiNextdotjs fr={12} /> },
 			{ title: `React.js`, icon: <SiReact fr={12} /> },
-			{ title: `Si`, icon: <SiFirebase fr={12} /> },
+			{ title: `Firebase`, icon: <SiFirebase fr={12} /> },
 			{ title: `D3.js`, icon: <SiD3dotjs fr={12} /> },
 			{ title: `Tailwind CSS`, icon: <SiTailwindcss fr={12} /> },
 			{ title: `TypeScript`, icon: <SiTypescript fr={12} /> },
