@@ -43,7 +43,7 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 					<meta property='og:image:height' content='320' />
 					<meta property='og:image:type' content='image/png' />
 					<meta name='twitter:card' content='summary' />
-					<meta name='twitter:site' content='@Caleb__Lovell' />
+					<meta name='twitter:site' content='@CalebLovell' />
 					<meta name='twitter:title' content={title} />
 					<meta name='twitter:image' content={imageUrl} />
 					<meta name='twitter:description' content={description} />
