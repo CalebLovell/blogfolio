@@ -20,7 +20,7 @@
 		"@tailwindcss/line-clamp": "^0.2.2",
 		"axios": "^0.22.0",
 		"dotenv": "^10.0.0",
-		"esbuild": "^0.12.19",
+		"esbuild": "^0.18.4",
 		"eslint-plugin-simple-import-sort": "^8.0.0",
 		"gray-matter": "^4.0.3",
 		"mdx-bundler": "^5.2.1",

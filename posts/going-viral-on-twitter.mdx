@@ -1,0 +1,161 @@
+---
+index: 8
+title: 'Latamap Went Viral on Twitter'
+description: 'Addressing the main complaints about the website and its data'
+slug: 'latamap-website-going-viral-on-twitter'
+tags: ['Tech']
+image:
+   {
+      url: './twitter-meme.jpg',
+      alt: 'Screaming woman on left points finger at orange cat looking scared and confused. Left text: "Twitter accusing me of intentionally spreading fascist propaganda". Right text: "Me waking up in shock that more than 2 people have found my website".',
+   }
+publishedAt: 'June 17th, 2023'
+updatedAt: 'June 17th, 2023'
+readingTime: '14 minutes'
+---
+
+### Background
+
+A few days ago, I decided it was time to stop fiddling with every detail of my side project. I had already spent _far_ too many hours of unpaid labor stressing over unimportant design decisions, but as anyone who has built a website to completion knows, it's really hard to quit adjusting things at the end!
+
+I was also feeling increasingly stupid for adjusting the dates of 19th century Uruguayan politicians, when I was certain no one would ever _actually_ look at such details. I currently work as freelance developer, so I can literally measure my time in money. And let's just say... I do not want to do the math on the opportunity cost of completing this project!
+
+But anyways, I finally made the decision to stop, and shared it with a few friends on social media. A day or so passed, and as I expected, not many people were very interested, because why would they be?
+
+So despite feeling a bit guilty for bothering more important people, I tagged a few LATAM related accounts I enjoy following on Twitter, figuring at least a few of them might appreciate my work, and I could move on with my life knowing I was the only person to appreciate what I spent so much time building.
+
+After I sent out that ping, I went to bed hoping for a few responses in the morning. Instead, when I opened my phone the next day, I was met by more chaos than I had ever imagined!
+
+### The Experience
+
+A quick word on the experience, before I jump into the complaints... as a long time Twitter lurker, I was certainly aware of the dynamic that exists there.
+
+But having carefully curated my feed to include almost exclusively informative tech and LATAM political accounts, I had nearly forgotten what the drama could look like.
+
+It's also one thing to observe the pile-ons when they are directed at other people. It's another thing to have it all directed at you and your precious work!
+
+But honestly, after the first hour or so of panic wore off, I actually quite enjoyed the chaos of it all.
+
+Just days before, I was feeling bad for spending so much time on the small details. And now, hate comments or otherwise, I had thousands of people delving into the depths of my website, using and critiquing all the things I had built!
+
+A little unnerving, sure. But far better than only a handful of friends glancing over the basics and moving on!
+
+So cheers to everyone who interacted with the site at all. Some of the insults made me laugh hysterically, and the various messages of support were obviously even nicer to receive. Thank you all!
+
+### The Complaints
+
+And oh boy were there some complaints. Let's dive in!
+
+#### The Data is Objectively Wrong!
+
+Compiling the data for nearly 2000 politicians was a gigantic task. Even with help, it took far too many hours of tedious work. Along the way, I made plenty of mistakes!
+
+Some of them were caught prior to the site going viral... but a few were live when the Twitter mob arrived.
+
+I regret the blatant errors, and corrected them on the fly as fast as I could run updates on my database. I promise I did not intend to apologize for the various dictators misclassified as "Independents", such as Pedro Eugenio Aramburu of Argentina, Getúlio Vargas of Brazil, or Porfirio Díaz himself of Mexico.
+
+There were also, and probably still are, various gaps in the data. Somehow I left Brazil president-less in 2018. In Panama, I had listed the various figurehead presidents instead of de-facto dictator Manuel Noriega during his time in power.
+
+I will continue to correct these problems as I find them!
+
+#### The Military Category
+
+This was a problem I referred to in my first blog post about the map, but I severely underestimated the trouble it would end up causing! I had initially tried to categorize every politician from "far-left" to "far-right", with no "military" category.
+
+But this proved especially difficult in the early post-colonial history of Latin America, when leaders like Simón Bolívar first liberated and ruled as the figureheads of new countries.
+
+And while I had decided at first just to label all such leaders as "independent", I eventually decided to include a "military" category for such figures, so the map would look a tiny bit more nuanced than before.
+
+Unfortunately, I think adding this nuance was a mistake. Why? Because as I've written on the site itself, this whole project is inherently _highly_ reductive! The left-right spectrum is simply an inadequate tool for understanding political complexity.
+
+This is a limitation I am well aware of, but I think the project is interesting in spite of that fact. It just must be understood when viewing it, and taken with a large grain of salt. Anyone looking for a place to find APA-citation-worthy resources should look elsewhere!
+
+So in adding a little bit of nuance with a new category, I immediately begged the question... why not more complexity? Why is the military deserving of extra nuance, and not anything else?
+
+And for many Latin Americans who have lived through painful military dictatorships, it felt like an insult to see a "military" category on the map's key, but then to see, instead, that I had classified them on the left-right spectrum anyways, as if I was denying that they were first and foremost, a military dictatorship!
+
+This was not my intention, of course. The problem I was attempting to avoid was that for much of Latin America history, many governments have been under forms of military dictatorship. Most on the "right", but some on the "left" as well.
+
+I didn't want to just paint everything green, because that felt like it would make the map less useful. But I see many people have interpreted that choice (intentional or not) as a way to whitewash the true nature of military governments.
+
+To try to combat this perception, I changed the category label to "Military Non-Aligned", in hopes that it would be more clear that I was only using the label for the early military governments which did not have clearly aligned political values. But I don't think that helped much, as people continue to make the same assumptions as before.
+
+In fact, I feel pretty sure that if I had actually classified all military dictatorships as simply "Military", that I would have been accused of a different bias - the bias of assuming all military governments are the same, and not politically aligned.
+
+Imagine the comments if I had colored Pinochet green as just "Military"! I won't be running that counterfactual, but I feel certain it would have inspired equal vitriol.
+
+In other words, I think this is a great example of a tricky user experience problem that I wasn't properly prepared for. All of the "easy" solutions lead to a possible misinterpretation.
+
+Thus, I need to come up with a better UX solution altogether. I am still pondering this, but some way to signify both categorizations seems important going forward.
+
+#### Borders Have Changed Over Time
+
+Very true! I initially explored adding this fact somehow, and thought about ways to display data on top of evolving borders as countries gained independence, fought wars, and otherwise changed hands.
+
+Unfortunately, the potential solutions were all limited by my time and technical ability. The project proved hard enough as it is. This would have introduced complexity I wasn't able to address.
+
+So yes, the borders have changed, and my map does not reflect those changes! Sorry. Perhaps I will find the time in the future to come back to this problem.
+
+#### The Data is Subjectively Wrong
+
+A lot of complaints have claimed that my worldview is biased, and that I should have categorized various leaders differently.
+
+On this point, I first plead guilty! It is inevitably true that I am biased, in this case most strongly toward a US-centric view of things.
+
+However, as for the map's categorizations, I truly made very few "editorial" choices. For most leaders and parties, I simply copied the political positions from the relevant Wikipedia pages, so there was almost no room for personal opinion.
+
+The only cases where I had to do so were related to the distant past, often the first 20-50 years of a country's history. Many countries had yet to form political parties, or were ruled by the military or "independent" leaders during this time. In these cases, I would often attempt to read longer histories of the individuals, and find categorizations listed deep in obscure sources.
+
+And yes, I accept that gathering data from Wikipedia is kind of lame, but I did not know of any other comprehensive resource that I could have used, other than countless more hours at various libraries, which I was not prepared to spend on a project I assumed no one would ever use.
+
+But in practice, most of these complaints of bias concern the most recent 10-20 years of political history that everyone is more familiar with. For these politicians, I claim innocence of personal bias, because I just used Wikipedia. But it is clearly true that Wikipedia can also have a political bias!
+
+To point out some particular cases that came up a lot: Joe Biden classified as "center-left", Dina Boluarte of Peru as "left-wing", and Lula da Silva of Brazil as "left-wing". Many people seem to feel these labels are too far "left" on the spectrum relative to the reality of their governments on the ground.
+
+Let's take them one at a time.
+
+1. Joe Biden
+
+It's clearly true that relative to Latin America, many US Democrats would not be considered as left-leaning as they are in the US. That said, relative to _US_ history, Joe Biden fits more reasonably in the "center-left" category. Some would certainly place him further left or further right, but I suspect the average US American's opinion would indeed be "center-left".
+
+2. Dina Boluarte of Peru
+
+Boluarte came to power only after her predecessor, Pedro Castillo, attempted to dissolve Congress in a move that has been called an attempted self-coup. The Peruvian right claims this was illegal. The Peruvian left claims that the right's _response_ to his move was illegal.
+
+After this event, Dina Boluarte was sworn in as president, and now presides over an extremely polarized Peruvian public, and has only been able to remain in office via the support of more right-leaning actors in Congress and the military.
+
+This begs the question - what should be the political position of such a president? Many have taken issue with the current categorization, based on her previous party affiliation of "left-wing", in light of the situation on the ground.
+
+3. Lula da Silva of Brazil
+
+Lastly, many have argued that Lula's presidency has been tempered by various right wing interests, and that the Workers' Party of Brazil is not nearly as left wing as it purports to be, especially in 2023 compared to the past. Thus, a categorization of pure "left-wing" is viewed as too strong.
+
+All of these cases bring me to my point, which is that left-right political categorization is pretty contentious, and inherently biased in one direction or another.
+
+In building this project, I chose a dataset that has clearly biased things toward a US American perspective, and also collapsed lots of nuance about true governmental influence into one inadequate political label based mostly on "official" party affiliation.
+
+In terms of collapsed nuance, I think there's not much I can change here, except to plead that people really not take this project so seriously! It's true that it lacks nuance. I've said so from the start, explicitly on the website and online. Sorry!
+
+On the other hand, the bias toward an American perspective feels like it could indeed be improved, now that the site has users beyond just myself.
+
+A professor actually reached out to me saying he intended to use my site for teaching purposes, but that I should consider improving some of the data. He gave me a link to a more nuanced dataset which I hope to look through and use to make adjustments going forward.
+
+If you are reading this, thanks!
+
+#### I Am a Dirty Gringo Fascist Intentionally Spreading Disinformation to Harm Latin America
+
+Not much to say here except that it's been very fun to read these accusations. Some have been quite creative!
+
+I've also noticed that the most hateful messages seem to come from accounts with the hammer and sickle unicode of ☭ in their names or bios.
+
+I feel no guilt suggesting that there might be a correlation between folks who identify with one of the most murderous ideologies in human history, and being a bit mentally unstable.
+
+But honestly, I've only gotten a few death threats so far from these folks, and many of them have contributed excellent memes despite their misguided ideological beliefs.
+
+Not to mention helped spread my website in raging quote tweets about the bourgeoisie and means of production. So I welcome their continued anger at my Gringo Fascist Disinformation 😆 Thanks for the viral boost!
+
+#### Everything Else
+
+The project received thousands of replies and quote tweets, and spawned countless discussions and debates in the comments. I'm not sure I'll ever be able to read them all, but as the deluge calms down a bit, I intend to try my best to respond to as many as possible.
+
+Thanks again to everyone who participated in this viral event! It's been a fun ride.

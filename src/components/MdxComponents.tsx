@@ -37,7 +37,7 @@ export const MdxComponents = {
 			<NextImage className='rounded-md' layout='fill' {...(props as any)} />
 		</div>
 	),
-	blockquote: (props: any) => <blockquote className='pl-8 my-4 italic font-medium border-l-2 border-gray-200' {...props} />,
+	blockquote: (props: any) => <blockquote className='pl-4 my-4 font-medium border-l-4 border-gray-200 bg-gray-800' {...props} />,
 	del: (props: any) => <del className='line-through' {...props} />,
 	pre: ({ children, ...props }: { children: React.ReactNode }) => {
 		return (
