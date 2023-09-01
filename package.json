@@ -23,6 +23,7 @@
 		"esbuild": "^0.18.4",
 		"eslint-plugin-simple-import-sort": "^8.0.0",
 		"gray-matter": "^4.0.3",
+		"lottie-react": "^2.4.0",
 		"mdx-bundler": "^5.2.1",
 		"next": "12",
 		"next-plausible": "^2.1.3",
