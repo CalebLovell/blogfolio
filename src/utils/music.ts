@@ -146,4 +146,131 @@ export const music: MusicListType = [
 			},
 		],
 	},
+
+	{
+		genre: `Pop Country`,
+		youtubePlaylistUrl: `https://www.youtube.com/playlist?list=PL5-Co_IKQCQhDMn0ZNDFJMkcLfepEA2Ar`,
+		songs: [
+			{
+				title: `American Kids`,
+				artist: {
+					name: `Kenny Chesney`,
+					url: `/artists/country/kenny.jpg`,
+				},
+				album: `The Big Revival`,
+				links: {
+					youtube: `https://www.youtube.com/watch?v=de1aPKXBdAE`,
+				},
+				time: `3:22`,
+			},
+			{
+				title: `My Church`,
+				artist: {
+					name: `Maren Morris`,
+					url: `/artists/country/maren.jpg`,
+				},
+				album: `HERO`,
+				links: {
+					youtube: `https://www.youtube.com/watch?v=ouWQ25O-Mcg`,
+				},
+				time: `3:35`,
+			},
+			{
+				title: `Dirt On My Boots`,
+				artist: {
+					name: `Jon Pardi`,
+					url: `/artists/country/jon_pardi.jpg`,
+				},
+				album: `California Sunrise`,
+				links: {
+					youtube: `https://www.youtube.com/watch?v=gCxbgqyC2Wg`,
+				},
+				time: `3:31`,
+			},
+			{
+				title: `Mama's Broken Heart`,
+				artist: {
+					name: `Miranda Lambert`,
+					url: `/artists/country/miranda.jpg`,
+				},
+				album: `Four the Record`,
+				links: {
+					youtube: `https://www.youtube.com/watch?v=7yg05svXp98`,
+				},
+				time: `3:01`,
+			},
+			{
+				title: `Your Man`,
+				artist: {
+					name: `Josh Turner`,
+					url: `/artists/country/josh_turner.jpg`,
+				},
+				album: `Your Man`,
+				links: {
+					youtube: `https://www.youtube.com/watch?v=nADTbWQof7Y`,
+				},
+				time: `3:29`,
+			},
+			{
+				title: `Free And Easy (Down The Road I Go)`,
+				artist: {
+					name: `Dierks Bentley`,
+					url: `/artists/country/dierks.png`,
+				},
+				album: `Long Trip Alone`,
+				links: {
+					youtube: `https://www.youtube.com/watch?v=6_-V3LPS_TY`,
+				},
+				time: `3:23`,
+			},
+			{
+				title: `Sunshine & Whiskey`,
+				artist: {
+					name: `Frankie Ballard`,
+					url: `/artists/country/frankie_ballard.jpg`,
+				},
+				album: `Sunshine & Whiskey`,
+				links: {
+					youtube: `https://www.youtube.com/watch?v=RYKnP-6cDWE`,
+				},
+				time: `3:01`,
+			},
+			{
+				title: `Drinkin' Problem`,
+				artist: {
+					name: `Midland`,
+					url: `/artists/country/midland.jpg`,
+				},
+				album: `On the Rocks`,
+				links: {
+					youtube: `https://www.youtube.com/watch?v=g7f6HiQ2LuU`,
+				},
+				time: `4:26`,
+			},
+			{
+				title: `Simple`,
+				artist: {
+					name: `Florida Georgia Line`,
+					url: `/artists/country/GFL.jpg`,
+				},
+				album: `Can't Say I Ain't Country`,
+				links: {
+					youtube: `https://www.youtube.com/watch?v=TuTDc9d_9yI`,
+				},
+				time: `3:10`,
+			},
+			{
+				title: `Die A Happy Man`,
+				artist: {
+					name: `Thomas Rhett`,
+					url: `/artists/country/thomas_rhett.jpg`,
+				},
+				album: `Tangled Up`,
+				links: {
+					youtube: `https://www.youtube.com/watch?v=w2CELiObPeQ`,
+				},
+				time: `4:03`,
+			},
+		],
+	},
 ];
