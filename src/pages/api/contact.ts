@@ -1,21 +1,18 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { Transporter } from 'nodemailer';
 import { MailOptions } from 'nodemailer-mailgun-transport';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 	try {
 		const nodemailer = require(`nodemailer`);
-		const mg = require(`nodemailer-mailgun-transport`);
 
-		const mailgunAuth = {
+		const transport = nodemailer.createTransport({
+			service: `gmail`,
 			auth: {
-				api_key: process.env.MAILGUN_API_KEY,
-				domain: process.env.MAILGUN_DOMAIN,
+				user: process.env.MY_EMAIL,
+				pass: process.env.MY_PASSWORD,
 			},
-		};
-
-		const smtpTransport: Transporter = nodemailer.createTransport(mg(mailgunAuth));
+		});
 
 		const email: MailOptions = {
 			from: `caleblovell1@gmail.com`,
@@ -25,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 			html: `<div><p>From: ${req.body.name}</p><p>Email: ${req.body.email}</p><p><b>Prompt: ${req.body.prompt}</b></p><p><p>${req.body.message}</p>Reply to: ${req.body.email}</p></div>`,
 		};
 
-		smtpTransport.sendMail(email, (error, response) => {
+		transport.sendMail(email, (error, response) => {
 			if (error) {
 				console.log(error.message);
 				res.status(500).send({ error });
