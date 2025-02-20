@@ -4,13 +4,13 @@
 	"author": "Caleb Lovell",
 	"license": "MIT",
 	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
+		"dev": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next dev",
+		"build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next build",
+		"start": "cross-env NODE_OPTIONS='--openssl-legacy-provider' next start",
 		"pretty": "prettier src --write",
 		"linty": "eslint src --fix",
 		"ts": "tsc",
-		"clean": "yarn pretty && yarn linty && yarn ts"
+		"clean": "npm run pretty && npm run linty && npm run ts"
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.1",
@@ -19,6 +19,7 @@
 		"@sentry/nextjs": "^6.19.6",
 		"@tailwindcss/line-clamp": "^0.2.2",
 		"axios": "^0.22.0",
+		"cross-env": "^7.0.3",
 		"dotenv": "^10.0.0",
 		"esbuild": "^0.18.4",
 		"eslint-plugin-simple-import-sort": "^8.0.0",
