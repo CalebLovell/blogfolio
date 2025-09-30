@@ -40,7 +40,7 @@ export const BlogArticle = ({ meta, code }: { meta: Blog; code: any }) => {
 					<div className='ml-3'>
 						<p className='text-sm font-medium text-gray-400'>Caleb Lovell</p>
 						<div className='flex space-x-1 text-sm text-gray-500'>
-							<time dateTime={meta.publishedAt}>{meta.publishedAt}</time>
+							<time dateTime={meta.updatedAt}>{meta.updatedAt}</time>
 						</div>
 					</div>
 				</div>

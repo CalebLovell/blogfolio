@@ -41,7 +41,9 @@ export const getPostBySlug = async (slug: string) => {
 	// Get the content of the file
 	const source = fs.readFileSync(path.join(POSTS_PATH, `${slug}.mdx`), `utf8`);
 
-	const { code, frontmatter } = await bundleMDX(source);
+	const { code, frontmatter } = await bundleMDX({
+		source,
+	});
 
 	const meta = {
 		...(frontmatter as Blog),
