@@ -19,7 +19,7 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 
 	const defaultMetadata = {
 		title: `Caleb Lovell's Blogfolio`,
-		description: `Check out my projects, read the blog, or send me a message!`,
+		description: `Check out my portfolio, read the blog, or send me a message!`,
 		image: `/CL.png`,
 		...metadata,
 	};

@@ -1,7 +1,7 @@
 module.exports = {
 	arrowParens: `avoid`,
 	bracketSpacing: true,
-	endOfLine: `crlf`,
+	endOfLine: `lf`,
 	htmlWhitespaceSensitivity: `css`,
 	jsxBracketSameLine: false,
 	jsxSingleQuote: true,

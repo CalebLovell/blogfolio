@@ -8,6 +8,15 @@ const { withSentryConfig } = require(`@sentry/nextjs`);
 
 const moduleExports = {
 	reactStrictMode: true,
+	async redirects() {
+		return [
+			{
+				source: `/projects`,
+				destination: `/portfolio`,
+				permanent: true,
+			},
+		];
+	},
 };
 
 const sentryWebpackPluginOptions = {

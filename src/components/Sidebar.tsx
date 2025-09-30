@@ -80,8 +80,8 @@ export const mobileNavItems = [
 		icon: <BookOpenIcon className='w-6 h-6' />,
 	},
 	{
-		title: `Projects`,
-		href: `/projects`,
+		title: `Portfolio`,
+		href: `/portfolio`,
 		icon: <FolderOpenIcon className='w-6 h-6' />,
 	},
 	{

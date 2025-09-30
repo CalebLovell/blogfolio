@@ -2,8 +2,8 @@ import { ChatIcon, FolderOpenIcon, MapIcon, MusicNoteIcon } from '@heroicons/rea
 
 const sections = [
 	{
-		title: `My Projects`,
-		href: `/projects`,
+		title: `My Portfolio`,
+		href: `/portfolio`,
 		icon: <FolderOpenIcon className='w-6 h-6' />,
 	},
 	{

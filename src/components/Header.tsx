@@ -77,8 +77,8 @@ export const desktopNavItems: NavItems = [
 	},
 	{
 		type: `link`,
-		title: `Projects`,
-		href: `/projects`,
+		title: `Portfolio`,
+		href: `/portfolio`,
 		icon: <FolderOpenIcon className='w-6 h-6' />,
 	},
 	{
