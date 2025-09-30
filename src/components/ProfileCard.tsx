@@ -6,7 +6,7 @@ export const ProfileCard = () => {
 			<Image className='object-cover rounded-full' height={60} width={60} src='/profile.jpg' alt='profile' />
 			<div className='ml-4'>
 				<p className='font-medium text-gray-200 text-md'>Caleb Lovell</p>
-				<p className='text-sm text-gray-400 truncate'>Web & Mobile Developer</p>
+				<p className='text-sm text-gray-400 truncate'>Frontend Engineer</p>
 			</div>
 		</div>
 	);

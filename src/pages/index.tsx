@@ -15,7 +15,7 @@ export default function Home({ blogs }) {
 				</div>
 				<HeroSection
 					title="Hey there! I'm Caleb Lovell"
-					subtitle='As a developer, I love building beautiful, accessible apps. In my freetime, you can find me reading, learning languages, or playing volleyball!'
+					subtitle='As a developer, I love building beautiful, data rich, accessible apps. In my free time, I like to read about geopolitics, practice my foreign language skills, and play a lot of beach volleyball!'
 				/>
 				<section className='flex flex-col items-center space-y-6'>
 					<MobilePagesSection />
