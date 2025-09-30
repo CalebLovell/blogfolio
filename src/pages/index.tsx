@@ -1,12 +1,13 @@
 import { HeroSection } from '@components/HeroSection';
 import { LatestBlogs } from '@components/LatestBlogs';
-import { MobilePagesSection } from '@components/MobilePagesSection';
+import { LatestPages } from '@components/LatestPages';
+import { LatestProjects } from '@components/LatestProjects';
 import { PageWrapper } from '@components/PageWrapper';
 import { ProfileCard } from '@components/ProfileCard';
-import { TechList } from '@components/TechList';
 import { getAllPostsMeta } from '@utils/mdx';
+import { techlessProjects } from 'pages/portfolio';
 
-export default function Home({ blogs }) {
+export default function Home({ blogs, projects }) {
 	return (
 		<PageWrapper>
 			<div className='px-3 md:px-5'>
@@ -18,9 +19,9 @@ export default function Home({ blogs }) {
 					subtitle='As a developer, I love building beautiful, data rich, accessible apps. In my free time, I like to read about geopolitics, practice my foreign language skills, and play a lot of beach volleyball!'
 				/>
 				<section className='flex flex-col items-center space-y-6'>
-					<MobilePagesSection />
+					<LatestProjects projects={projects} />
 					<LatestBlogs blogs={blogs} />
-					<TechList />
+					<LatestPages />
 				</section>
 			</div>
 		</PageWrapper>
@@ -33,6 +34,7 @@ export const getStaticProps = () => {
 	return {
 		props: {
 			blogs: sortedBlogs.slice(0, 5),
+			projects: techlessProjects,
 		},
 	};
 };

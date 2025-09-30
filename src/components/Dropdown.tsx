@@ -36,9 +36,9 @@ export const Dropdown = ({ title, links }: Props) => {
 									<Link href={item.href} key={item.name}>
 										<a
 											href={item.href}
-											className='px-10 py-2 font-medium text-gray-200 transition duration-150 ease-in-out rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+											className='w-32 p-2 font-medium text-gray-200 transition duration-150 ease-in-out rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
 										>
-											<p className='text-base font-medium text-gray-200'>{item.name}</p>
+											<p className='text-base font-medium text-gray-200 text-center'>{item.name}</p>
 										</a>
 									</Link>
 								))}

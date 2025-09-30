@@ -23,11 +23,11 @@ const sections = [
 	},
 ];
 
-export const MobilePagesSection = () => {
+export const LatestPages = () => {
 	return (
-		<div className='w-full block sm:hidden'>
-			<h3 className='mt-4 text-2xl font-semibold tracking-tight text-gray-200'>Personal Stuff</h3>
-			<p className='mt-1 text-gray-400 font-semibold text-sm mb-4'>Check out some of my pages below!</p>
+		<div className='w-full'>
+			<h3 className='mt-4 text-2xl font-semibold tracking-tight text-gray-200'>Personal Pages</h3>
+			<p className='mt-1 text-gray-400 font-semibold text-sm mb-4'>Check out some of my other links below!</p>
 			<ul className='grid grid-cols-2 text-red-400 sm:grid-cols-4 gap-x-4 gap-y-4'>
 				{sections.map(x => (
 					<a

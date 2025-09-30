@@ -1,3 +1,5 @@
+import { GlobeAltIcon } from '@heroicons/react/outline';
+import { CodeIcon } from '@heroicons/react/solid';
 import Image from 'next/image';
 import { Project } from 'pages/portfolio';
 
@@ -33,20 +35,22 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 			</div>
 			<div className='flex justify-end gap-2'>
 				<a
-					className='w-full sm:w-auto flex text-center justify-center items-center px-2 md:px-4 py-1.5 text-sm font-medium hover:scale-105 text-gray-200 transition duration-150 ease-in-out bg-red-600 border-2 border-red-600 rounded-md lg:text-base hover:bg-red-800 hover:border-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
+					className='w-full sm:w-auto flex text-center justify-center items-center px-2 md:px-4 py-1.5 text-sm font-medium hover:scale-105 text-gray-200 transition duration-150 ease-in-out bg-red-600 border-2 border-red-600 rounded-md lg:text-sm hover:bg-red-800 hover:border-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
 					href={project.websiteUrl}
 					target='_blank'
 					rel='noreferrer'
 				>
 					Visit Website
+					<GlobeAltIcon className='w-5 h-5 ml-2' />
 				</a>
 				<a
-					className='w-full sm:w-auto flex text-center justify-center items-center px-2 md:px-4 py-1.5 text-sm font-medium text-gray-200 hover:scale-105 transition duration-150 ease-in-out bg-transparent border-2 border-white rounded-md lg:text-base hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
+					className='w-full sm:w-auto flex text-center justify-center items-center px-2 md:px-4 py-1.5 text-sm font-medium text-gray-200 hover:scale-105 transition duration-150 ease-in-out bg-transparent border-2 border-white rounded-md lg:text-sm hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
 					href={project.githubUrl}
 					target='_blank'
 					rel='noreferrer'
 				>
 					View Code
+					<CodeIcon className='w-5 h-5 ml-2' />
 				</a>
 			</div>
 		</article>

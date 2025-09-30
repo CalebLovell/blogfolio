@@ -85,6 +85,7 @@ export const desktopNavItems: NavItems = [
 		type: `dropdown`,
 		title: `Personal`,
 		links: [
+			{ name: `Tech Stack`, href: `/personal/tech`, icon: <ChatIcon className='w-6 h-6' /> },
 			{ name: `Travel`, href: `/personal/map`, icon: <MapIcon className='w-6 h-6' /> },
 			{ name: `Music`, href: `/personal/music`, icon: <MusicNoteIcon className='w-6 h-6' /> },
 		],

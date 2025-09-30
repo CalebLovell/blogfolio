@@ -56,7 +56,7 @@ export const Footer = () => {
 					</a>
 					to see the code!
 				</p>
-				<div className='flex items-center justify-center mt-4 space-x-6 md:mt-0'>
+				<div className='flex items-center justify-center space-x-6 md:mt-0'>
 					{socials.map(x => (
 						<a
 							key={x.title}

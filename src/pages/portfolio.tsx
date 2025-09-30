@@ -18,6 +18,7 @@ import { Fragment } from 'react';
 export interface Project {
 	title: string;
 	description: string;
+	shortDescription: string;
 	image: { url: string; alt: string; width: number; height: number };
 	websiteUrl: string;
 	githubUrl: string;
@@ -27,8 +28,9 @@ export interface Project {
 const projects: Project[] = [
 	{
 		title: `Latin American Political History Map`,
-		description: `A visual and interactive timeline of the political history of Latin America.`,
-		image: { url: `/latamap.png`, alt: `A screenshot of the map set to January 1st, 2023`, width: 1200, height: 630 },
+		description: `A map and timeline of the political history of Latin America. Choose a date to explore the political landscape of a particular year, or press play and watch the politics of the region evolve over the centuries.`,
+		shortDescription: `Timeline map of Latin America`,
+		image: { url: `/latamap.png`, alt: `A screenshot of the map set to January 1st, 2023`, width: 1094, height: 684 },
 		websiteUrl: `https://www.latamap.com/`,
 		githubUrl: `https://github.com/CalebLovell/latamap`,
 		tech: [
@@ -43,7 +45,8 @@ const projects: Project[] = [
 	},
 	{
 		title: `SteelPoll`,
-		description: `SteelPoll is a web app for making real-time, privacy-focused polls that you can share with your friends. You can vote with First Past The Post, Ranked Choice and STAR voting systems.`,
+		description: `A web app for making real-time, privacy-focused polls that you can share with your friends. You can vote with First Past The Post, Ranked Choice and STAR voting systems.`,
+		shortDescription: `Create and share real-time polls`,
 		image: { url: `/steelpoll.png`, alt: `steelpoll results page`, width: 1094, height: 684 },
 		websiteUrl: `https://www.steelpoll.com/`,
 		githubUrl: `https://github.com/CalebLovell/steelpoll`,
@@ -57,8 +60,9 @@ const projects: Project[] = [
 		],
 	},
 	{
-		title: `Caleb Lovell's Blogfolio`,
+		title: `Portfolio and Blog`,
 		description: `My personal website is what you are viewing right now! It's a blog, portfolio, contact form, and space for me to experiment with stuff.`,
+		shortDescription: `Portfolio and blog website`,
 		image: { url: `/blogfolio.png`, alt: `the website's home page`, width: 1094, height: 684 },
 		websiteUrl: `https://www.caleblovell.com/`,
 		githubUrl: `https://github.com/CalebLovell/personal-site`,
@@ -70,6 +74,8 @@ const projects: Project[] = [
 		],
 	},
 ];
+
+export const techlessProjects = projects.map(x => ({ ...x, tech: null }));
 
 const metadata = {
 	title: `Caleb Lovell's Projects Portfolio`,
