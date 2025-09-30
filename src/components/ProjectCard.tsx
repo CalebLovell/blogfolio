@@ -33,7 +33,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 					blurDataURL={project.image.url}
 				/>
 			</div>
-			<div className='flex justify-end gap-2'>
+			<div className='flex justify-end gap-4'>
 				<a
 					className='w-full sm:w-auto flex text-center justify-center items-center px-2 md:px-4 py-1.5 text-sm font-medium hover:scale-105 text-gray-200 transition duration-150 ease-in-out bg-red-600 border-2 border-red-600 rounded-md lg:text-sm hover:bg-red-800 hover:border-red-800 focus:outline-none focus:ring-2 focus:ring-offset-2 ring-offset-gray-900 focus:ring-red-600'
 					href={project.websiteUrl}
