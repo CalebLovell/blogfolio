@@ -22,8 +22,9 @@ const sendEmail = async (emailData: EmailData) => {
 export const useSendEmail = () => {
 	const toasts = useToasts();
 	return useMutation((emailData: EmailData) => sendEmail(emailData), {
-		onError: (error: Error) => {
-			toasts.addToast(error.message, { appearance: `error` });
+		onError: (error: any) => {
+			const apiMessage = error?.response?.data?.error || error.message || `An error occurred`;
+			toasts.addToast(apiMessage, { appearance: `error` });
 		},
 		onSuccess: () => {
 			toasts.addToast(`Email Sent! Thanks for reaching out. I'll respond as soon as possible!`, { appearance: `success` });
